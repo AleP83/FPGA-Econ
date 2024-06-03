@@ -1,0 +1,1148 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'centos' on host 'ip-10-0-14-155.us-west-2.compute.internal' (Linux_x86_64 version 3.10.0-1160.81.1.el7.x86_64) on Fri May 03 18:17:54 UTC 2024
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/centos/code/_x/runOnfpga/runOnfpga'
+Sourcing Tcl script 'runOnfpga.tcl'
+INFO: [HLS 200-1510] Running: open_project runOnfpga 
+INFO: [HLS 200-10] Creating and opening project '/home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga'.
+INFO: [HLS 200-1510] Running: set_top runOnfpga 
+INFO: [HLS 200-1510] Running: add_files /home/centos/code/fpga/hw.cpp -cflags  -g -D _FPGA_MODE -I /home/centos/code/common -I /home/centos/code/fpga -I /home/centos/code  
+INFO: [HLS 200-10] Adding design file '/home/centos/code/fpga/hw.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flgb2104-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 250.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_debug -enable 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection none 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname runOnfpga 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 540.723 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/code/fpga/hw.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.65 seconds. CPU system time: 0.94 seconds. Elapsed time: 5.93 seconds; current allocated memory: 72.168 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hw_init_env' into 'hw_top_init' (/home/centos/code/fpga/hw.cpp:65:3)
+INFO: [HLS 214-131] Inlining function 'hw_log' into 'hw_sim_alm' (/home/centos/code/fpga/hw.cpp:299:15)
+INFO: [HLS 214-131] Inlining function 'hw_rail_values' into 'hw_sim_alm' (/home/centos/code/fpga/hw.cpp:304:5)
+INFO: [HLS 214-131] Inlining function 'hw_exp' into 'hw_sim_alm' (/home/centos/code/fpga/hw.cpp:303:16)
+INFO: [HLS 214-131] Inlining function 'hw_findrange' into 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:429:28)
+INFO: [HLS 214-131] Inlining function 'hw_findrange' into 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:433:28)
+INFO: [HLS 214-131] Inlining function 'hw_fabs' into 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:497:33)
+INFO: [HLS 214-131] Inlining function 'hw_rail_values' into 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:494:5)
+INFO: [HLS 214-131] Inlining function 'hw_rail_values' into 'hw_sim_ast' (/home/centos/code/fpga/hw.cpp:838:4)
+INFO: [HLS 214-131] Inlining function 'hw_fxd_rail_values' into 'hw_sim_ast' (/home/centos/code/fpga/hw.cpp:761:6)
+INFO: [HLS 214-131] Inlining function 'hw_rail_values' into 'hw_sim_ast' (/home/centos/code/fpga/hw.cpp:595:3)
+INFO: [HLS 214-131] Inlining function 'hw_findrange' into 'hw_sim_ast' (/home/centos/code/fpga/hw.cpp:623:25)
+INFO: [HLS 214-131] Inlining function 'hw_findrange' into 'hw_sim_ast' (/home/centos/code/fpga/hw.cpp:738:28)
+INFO: [HLS 214-131] Inlining function 'hw_log' into 'sim_alm_coeff' (/home/centos/code/fpga/hw.cpp:890:21)
+INFO: [HLS 214-131] Inlining function 'hw_sqrt' into 'sim_alm_coeff' (/home/centos/code/fpga/hw.cpp:921:13)
+INFO: [HLS 214-131] Inlining function 'hw_log' into 'sim_alm_coeff' (/home/centos/code/fpga/hw.cpp:891:21)
+INFO: [HLS 214-131] Inlining function 'hw_log' into 'sim_alm_coeff' (/home/centos/code/fpga/hw.cpp:896:23)
+INFO: [HLS 214-131] Inlining function 'hw_log' into 'sim_alm_coeff' (/home/centos/code/fpga/hw.cpp:897:23)
+INFO: [HLS 214-210] Disaggregating variable 'st_env' (/home/centos/code/fpga/hw.cpp:11:0)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_693_1' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:693:24)
+INFO: [HLS 214-291] Loop 'ast_5' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:735:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1256_1' is marked as complete unroll implied by the pipeline pragma (/opt/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:1256:26)
+INFO: [HLS 214-291] Loop 'ihp_3' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:399:5)
+INFO: [HLS 214-291] Loop 'ihp_4' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:414:6)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_516_1' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:516:23)
+INFO: [HLS 214-291] Loop 'fr300_5' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:1323:3)
+INFO: [HLS 214-291] Loop 'fr300_3' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:1312:3)
+INFO: [HLS 214-291] Loop 'fr300_1' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:1302:3)
+INFO: [HLS 214-291] Loop 'fr4_1' is marked as complete unroll implied by the pipeline pragma (/home/centos/code/fpga/hw.cpp:1181:3)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_693_1' (/home/centos/code/fpga/hw.cpp:693:24) in function 'hw_sim_ast' completely with a factor of 8 (/home/centos/code/fpga/hw.cpp:554:0)
+INFO: [HLS 214-186] Unrolling loop 'ast_5' (/home/centos/code/fpga/hw.cpp:735:5) in function 'hw_sim_ast' completely with a factor of 8 (/home/centos/code/fpga/hw.cpp:554:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1256_1' (/opt/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:1256:26) in function 'hw_sim_ast' completely with a factor of 1 (/home/centos/code/fpga/hw.cpp:554:0)
+INFO: [HLS 214-186] Unrolling loop 'ihp_3' (/home/centos/code/fpga/hw.cpp:399:5) in function 'hw_sim_ihp' completely with a factor of 2 (/home/centos/code/fpga/hw.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'ihp_4' (/home/centos/code/fpga/hw.cpp:414:6) in function 'hw_sim_ihp' completely with a factor of 2 (/home/centos/code/fpga/hw.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1256_1' (/opt/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h:1256:26) in function 'hw_sim_ihp' completely with a factor of 1 (/home/centos/code/fpga/hw.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_516_1' (/home/centos/code/fpga/hw.cpp:516:23) in function 'hw_sim_ihp' completely with a factor of 8 (/home/centos/code/fpga/hw.cpp:312:0)
+INFO: [HLS 214-186] Unrolling loop 'fr300_5' (/home/centos/code/fpga/hw.cpp:1323:3) in function 'hw_findrange_n300' completely with a factor of 5 (/home/centos/code/fpga/hw.cpp:1294:0)
+INFO: [HLS 214-186] Unrolling loop 'fr300_3' (/home/centos/code/fpga/hw.cpp:1312:3) in function 'hw_findrange_n300' completely with a factor of 2 (/home/centos/code/fpga/hw.cpp:1294:0)
+INFO: [HLS 214-186] Unrolling loop 'fr300_1' (/home/centos/code/fpga/hw.cpp:1302:3) in function 'hw_findrange_n300' completely with a factor of 30 (/home/centos/code/fpga/hw.cpp:1294:0)
+INFO: [HLS 214-186] Unrolling loop 'fr4_1' (/home/centos/code/fpga/hw.cpp:1181:3) in function 'hw_findrange_n4' completely with a factor of 3 (/home/centos/code/fpga/hw.cpp:1176:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.139.148.158.168.178.188.198.208.276.286)' into 'fp_struct<double>::to_double() const (.136.145.155.165.175.185.195.205.273.283)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:521:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.136.145.155.165.175.185.195.205.273.283)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:536:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double generic_copysign<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double generic_copysign<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'double generic_copysign<double>(double, double)' into 'double generic_fabs<double>(double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0)
+INFO: [HLS 214-178] Inlining function 'double generic_fabs<double>(double)' into 'fabs' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c/fabsdouble.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'pow' into 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:312:0)
+INFO: [HLS 214-178] Inlining function 'fabs' into 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:312:0)
+INFO: [HLS 214-178] Inlining function 'RSquaredCalc' into 'sim_alm_coeff' (/home/centos/code/fpga/hw.cpp:848:0)
+INFO: [HLS 214-178] Inlining function 'hw_top_init' into 'runOnfpga' (/home/centos/code/fpga/hw.cpp:103:0)
+INFO: [HLS 214-178] Inlining function 'hw_sim_alm' into 'runOnfpga' (/home/centos/code/fpga/hw.cpp:103:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL6st_env.17': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.cpp:11:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL7km_grid': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.h:30625:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL6k_grid': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.h:30631:0)
+INFO: [HLS 214-248] Applying array_partition to 'kprime_interp0': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.cpp:567:7)
+INFO: [HLS 214-248] Applying array_partition to 'kprime_interp1': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.cpp:568:8)
+INFO: [HLS 214-248] Applying array_partition to 'st_kprimes': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.cpp:118:8)
+INFO: [HLS 214-248] Applying array_partition to 'kmprime': Complete partitioning on dimension 1. (/home/centos/code/fpga/hw.cpp:121:8)
+INFO: [HLS 214-248] Applying array_partition to 'kcross_l': Cyclic partitioning with factor 8 on dimension 1. (/home/centos/code/fpga/hw.cpp:207:9)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.85 seconds. CPU system time: 0.65 seconds. Elapsed time: 10.54 seconds; current allocated memory: 72.168 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 72.168 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 8.54 seconds. CPU system time: 0.13 seconds. Elapsed time: 8.66 seconds; current allocated memory: 264.168 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+WARNING: [SYNCHK 200-23] /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h:628: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 9.67 seconds. CPU system time: 0.13 seconds. Elapsed time: 9.79 seconds; current allocated memory: 520.168 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-5' in function 'sim_alm_coeff' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-6' in function 'sim_alm_coeff' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-7' in function 'sim_alm_coeff' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-8' in function 'sim_alm_coeff' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-10' in function 'sim_alm_coeff' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-11' in function 'sim_alm_coeff' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_1' (/home/centos/code/fpga/hw.cpp:134) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_2_2' (/home/centos/code/fpga/hw.cpp:151) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'init_1' (/home/centos/code/fpga/hw.cpp:24) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'init_2' (/home/centos/code/fpga/hw.cpp:38) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-7' in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'alm_2' (/home/centos/code/fpga/hw.cpp:279) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'ast_kcross' (/home/centos/code/fpga/hw.cpp:208) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_227_2' (/home/centos/code/fpga/hw.cpp:227) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_5' (/home/centos/code/fpga/hw.cpp:241) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_7' (/home/centos/code/fpga/hw.cpp:247) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_10' (/home/centos/code/fpga/hw.cpp:253) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_11' (/home/centos/code/fpga/hw.cpp:259) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'main_12' (/home/centos/code/fpga/hw.cpp:269) in function 'runOnfpga' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'init_1' (/home/centos/code/fpga/hw.cpp:24) in function 'runOnfpga' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_31_1' (/home/centos/code/fpga/hw.cpp:31) in function 'runOnfpga' completely with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'ihp_2' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:503) in function 'hw_sim_ihp' partially with a factor of 2.
+INFO: [XFORM 203-102] Automatically partitioning small array 'st_env.epsilon' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'coeff' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'r2' (/home/centos/code/fpga/hw.cpp:120) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'coeff' (/home/centos/code/fpga/hw.cpp:122) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'spread_scalar.V' (/home/centos/code/fpga/hw.cpp:353) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'coeff' (/home/centos/code/fpga/hw.cpp:849) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'coeff_new' (/home/centos/code/fpga/hw.cpp:860) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'badcoeff' (/home/centos/code/fpga/hw.cpp:901) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'goodcoeff' (/home/centos/code/fpga/hw.cpp:902) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'twobytwo' (/home/centos/code/fpga/hw.cpp:934) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'st_env.epsilon' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeff' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'r2' (/home/centos/code/fpga/hw.cpp:120) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeff' (/home/centos/code/fpga/hw.cpp:122) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'spread_scalar.V' (/home/centos/code/fpga/hw.cpp:353) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeff' (/home/centos/code/fpga/hw.cpp:849) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeff_new' (/home/centos/code/fpga/hw.cpp:860) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'badcoeff' (/home/centos/code/fpga/hw.cpp:901) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'goodcoeff' (/home/centos/code/fpga/hw.cpp:902) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'twobytwo' (/home/centos/code/fpga/hw.cpp:934) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/centos/code/fpga/hw.cpp:866:7) to (/home/centos/code/fpga/hw.cpp:885:16) in function 'sim_alm_coeff'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'runOnfpga'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:690:3) in function 'pow_reduce::pow_generic<double>'... converting 27 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:503:21) in function 'hw_sim_ihp'... converting 257 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/centos/code/fpga/hw.cpp:346:3) in function 'hw_sim_ihp'... converting 11 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/centos/code/fpga/hw.cpp:579:15) in function 'hw_sim_ast'... converting 371 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/centos/code/fpga/hw.cpp:579:15) to (/home/centos/code/fpga/hw.cpp:645:4) in function 'hw_sim_ast'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/centos/code/fpga/hw.cpp:615:13) in function 'hw_sim_ast'... converting 11 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/centos/code/fpga/hw.cpp:598:3) in function 'hw_sim_ast'... converting 11 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:320)...10 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'hw_sim_ihp' (/home/centos/code/fpga/hw.cpp:311)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'hw_sim_ast' (/home/centos/code/fpga/hw.cpp:567:32)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 8.91 seconds. CPU system time: 0.14 seconds. Elapsed time: 9.07 seconds; current allocated memory: 744.172 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'main_2' (/home/centos/code/fpga/hw.cpp:144:19) in function 'runOnfpga' the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'alm_1' (/home/centos/code/fpga/hw.cpp:279:15) in function 'runOnfpga'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_198_1' (/home/centos/code/fpga/hw.cpp:275:39) in function 'runOnfpga' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'ihp_1' (/home/centos/code/fpga/hw.cpp:348:15) in function 'hw_sim_ihp' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'ast_2' (/home/centos/code/fpga/hw.cpp:647:17) in function 'hw_sim_ast'.
+WARNING: [HLS 200-960] Cannot flatten loop 'ast_1' (/home/centos/code/fpga/hw.cpp:579:15) in function 'hw_sim_ast' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 1250 on port 'gmem0' (/home/centos/code/fpga/hw.cpp:255:23). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 600 on port 'gmem0' (/home/centos/code/fpga/hw.cpp:249:23). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'y_bad_v' (/home/centos/code/fpga/hw.cpp:890:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'x_bad_v' (/home/centos/code/fpga/hw.cpp:891:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'y_good_v' (/home/centos/code/fpga/hw.cpp:896:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'x_good_v' (/home/centos/code/fpga/hw.cpp:897:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'idshock.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'hw_ihp_iter' (/home/centos/code/fpga/hw.cpp:205:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'kmts' (/home/centos/code/fpga/hw.cpp:604:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'x_good_v' 
+INFO: [HLS 200-472] Inferring partial write operation for 'y_good_v' 
+INFO: [HLS 200-472] Inferring partial write operation for 'x_bad_v' 
+INFO: [HLS 200-472] Inferring partial write operation for 'y_bad_v' 
+INFO: [HLS 200-472] Inferring partial write operation for 'agshock' (/home/centos/code/fpga/hw.cpp:136:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'st_kprimes' (/home/centos/code/fpga/hw.cpp:33:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'st_kcross' (/home/centos/code/fpga/hw.cpp:40:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'hw_ihp_iter' 
+INFO: [HLS 200-472] Inferring partial write operation for 'kcross_l' (/home/centos/code/fpga/hw.cpp:216:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'st_kcross' (/home/centos/code/fpga/hw.cpp:229:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'kprime_new' (/home/centos/code/fpga/hw.cpp:505:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'st_kprimes_0' (/home/centos/code/fpga/hw.cpp:517:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'st_kcross_0' (/home/centos/code/fpga/hw.cpp:762:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'kprime_interp0' (/home/centos/code/fpga/hw.cpp:695:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'kprime_interp1' (/home/centos/code/fpga/hw.cpp:696:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'idshock.V' (/home/centos/code/fpga/hw.cpp:153:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'idshock.V' (/home/centos/code/fpga/hw.cpp:158:17)
+INTERNAL-INFO: never seen llvm instruction 'dlog'(521)
+INTERNAL-INFO: never seen llvm instruction 'dexp'(522)
+INTERNAL-INFO: never seen llvm instruction 'dlog'(521)
+INTERNAL-INFO: never seen llvm instruction 'dlog'(521)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 6.39 seconds. CPU system time: 0.19 seconds. Elapsed time: 6.58 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'runOnfpga' ...
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'main_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_2_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_2_2'.
+WARNING: [HLS 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_3_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_4_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_5_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_6_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_9_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 81, loop 'main_2_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_init_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'init_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'init_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_init_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'init_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'init_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_alm_1_alm_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'alm_1_alm_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 74, loop 'alm_1_alm_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_47) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 79, function 'pow_generic<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.55 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.6 seconds. CPU system time: 0 seconds. Elapsed time: 0.6 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_findrange_n4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'hw_findrange_n4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'hw_findrange_n4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.67 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_findrange_n300' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'hw_findrange_n300'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, function 'hw_findrange_n300'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_sim_ihp_Pipeline_ihp_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ihp_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 224, loop 'ihp_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.48 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 8.26 seconds. CPU system time: 0 seconds. Elapsed time: 8.27 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_sim_ihp_Pipeline_ihp_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ihp_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 15, loop 'ihp_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 7.55 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_sim_ihp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.06 seconds. CPU system time: 0 seconds. Elapsed time: 2.06 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_ast_kcross' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ast_kcross'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'ast_kcross'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5.94 seconds. CPU system time: 0 seconds. Elapsed time: 5.94 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_sim_ast_Pipeline_ast_2_ast_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ast_2_ast_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'ast_2_ast_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_sim_ast_Pipeline_ast_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ast_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 80, loop 'ast_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.27 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.3 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_sim_ast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.08 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.13 seconds. CPU system time: 0 seconds. Elapsed time: 2.14 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 5.1 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff_Pipeline_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff_Pipeline_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff_Pipeline_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'regression' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.47 seconds. CPU system time: 0 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sim_alm_coeff' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.81 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.81 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.33 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_VITIS_LOOP_227_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_227_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_227_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.8 seconds. CPU system time: 0 seconds. Elapsed time: 0.81 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'main_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'main_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_10'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'main_10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'main_11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga_Pipeline_main_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'main_12'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln267', /home/centos/code/fpga/hw.cpp:267)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln267', /home/centos/code/fpga/hw.cpp:267)) in the first pipeline iteration (II = 2 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln267', /home/centos/code/fpga/hw.cpp:267)) in the first pipeline iteration (II = 3 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln267', /home/centos/code/fpga/hw.cpp:267)) in the first pipeline iteration (II = 4 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-880] The II Violation in module 'runOnfpga_Pipeline_main_12' (loop 'main_12'): Unable to enforce a carried dependence constraint (II = 130, distance = 1, offset = 1) between bus response operation ('empty_126', /home/centos/code/fpga/hw.cpp:269) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:269) and bus request operation ('gmem0_load_10_req', /home/centos/code/fpga/hw.cpp:267) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:267).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'runOnfpga_Pipeline_main_12' (loop 'main_12'): Unable to enforce a carried dependence constraint (II = 137, distance = 1, offset = 1) between bus response operation ('empty_126', /home/centos/code/fpga/hw.cpp:269) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:269) and bus request operation ('gmem0_load_10_req', /home/centos/code/fpga/hw.cpp:267) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:267).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'runOnfpga_Pipeline_main_12' (loop 'main_12'): Unable to enforce a carried dependence constraint (II = 141, distance = 1, offset = 1) between bus response operation ('empty_126', /home/centos/code/fpga/hw.cpp:269) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:269) and bus request operation ('gmem0_load_10_req', /home/centos/code/fpga/hw.cpp:267) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:267).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 142, Depth = 142, loop 'main_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runOnfpga' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.172 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'idshock_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.76 seconds. CPU system time: 0 seconds. Elapsed time: 4.75 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_42_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 11.74 seconds. CPU system time: 0.01 seconds. Elapsed time: 11.74 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_main_1' pipeline 'main_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_2_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_main_2_2' pipeline 'main_2_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_2_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.172 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_init_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_init_1' pipeline 'init_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_init_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_init_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_init_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_alm_1_alm_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_alm_1_alm_2' pipeline 'alm_1_alm_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_20_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dlog_64ns_64ns_64_39_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_43_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_alm_1_alm_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_4_4_16_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_7_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_12_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_17_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_22_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_27_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_32_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pow_generic_double_s' pipeline 'pow_generic<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'pow_generic_double_s' is 15043 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_19s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_80ns_90_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_71s_71_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40ns_40ns_80_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43ns_36ns_79_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_93_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_100_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_54s_6ns_54_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_71ns_4ns_75_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_73ns_6ns_79_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77ns_6ns_83_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77s_54s_131_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_82ns_6ns_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_83ns_6ns_89_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_87ns_6ns_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_92ns_6ns_98_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.86 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.88 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_findrange_n4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_findrange_n4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.04 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_findrange_n300' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_findrange_n300' pipeline 'hw_findrange_n300' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_findrange_n300'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_sim_ihp_Pipeline_ihp_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_sim_ihp_Pipeline_ihp_2' pipeline 'ihp_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'hw_sim_ihp_Pipeline_ihp_2' is 85944 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 84 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_11ns_12_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_11ns_13_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1316_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1416_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1516_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1616_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_30016_64_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_43_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_816_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_sim_ihp_Pipeline_ihp_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.93 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.97 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_sim_ihp_Pipeline_ihp_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_sim_ihp_Pipeline_ihp_5' pipeline 'ihp_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_sim_ihp_Pipeline_ihp_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 11.29 seconds. CPU system time: 0.04 seconds. Elapsed time: 11.35 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_sim_ihp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2217_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2221_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2225_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2229_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2281_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2285_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2289_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2293_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2297_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2301_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2305_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2309_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2313_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2317_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2321_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2325_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2329_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2333_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2337_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2341_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2345_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2349_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2353_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2357_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2361_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2365_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2369_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ihp/grp_fu_2373_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_sim_ihp'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_ast_kcross' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_ast_kcross' pipeline 'ast_kcross' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_ast_kcross'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6.96 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.98 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_sim_ast_Pipeline_ast_2_ast_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_sim_ast_Pipeline_ast_2_ast_3' pipeline 'ast_2_ast_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_sim_ast_Pipeline_ast_2_ast_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_sim_ast_Pipeline_ast_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_sim_ast_Pipeline_ast_4' pipeline 'ast_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'hw_sim_ast_Pipeline_ast_4' is 116264 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_30016_64_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_sim_ast_Pipeline_ast_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.71 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.74 seconds; current allocated memory: 1.360 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_sim_ast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2217_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2221_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2225_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2229_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2281_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2285_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2289_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2293_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2297_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2301_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2305_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2309_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2313_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2317_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2321_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2325_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2329_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2333_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2337_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2341_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2345_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2349_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2353_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2357_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2361_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2365_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2369_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'hw_sim_ast/grp_fu_2373_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_11ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_11ns_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_43_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_sim_ast'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 11.92 seconds. CPU system time: 0.07 seconds. Elapsed time: 12.05 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6.87 seconds. CPU system time: 0.02 seconds. Elapsed time: 6.89 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff_Pipeline_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff_Pipeline_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff_Pipeline_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff_Pipeline_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff_Pipeline_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff_Pipeline_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff_Pipeline_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff_Pipeline_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'regression' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'regression'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sim_alm_coeff' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dlog_64ns_64ns_64_39_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_21_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_64_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sim_alm_coeff'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.64 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.66 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_VITIS_LOOP_227_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_VITIS_LOOP_227_2' pipeline 'VITIS_LOOP_227_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_83_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_VITIS_LOOP_227_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.26 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_main_5' pipeline 'main_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runOnfpga_Pipeline_main_11' pipeline 'main_11' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_42_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga_Pipeline_main_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga_Pipeline_main_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.422 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runOnfpga' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'runOnfpga/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'runOnfpga/hw_agshock' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'runOnfpga/hw_idshock' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'runOnfpga/preinit' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'runOnfpga/results' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'runOnfpga/hw_iter' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'runOnfpga' to 's_axilite & ap_ctrl_chain'.
+WARNING: [RTGEN 206-101] Register 'st_env_er_inv_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_er_inv' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_epsilon_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_irate_factor_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_irate_factor' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_wage_factor_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_wage_factor' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_cons2_factor_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_cons2_factor_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_cons2_factor_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'st_env_cons2_factor' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'hw_agshock', 'hw_idshock', 'preinit', 'results', 'hw_iter', 'return' and 'ap_local_deadlock' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'runOnfpga' is 14083 from HDL expression: (1'b1 == ap_CS_fsm_state85)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_5_full_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dlog_64ns_64ns_64_39_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runOnfpga'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.16 seconds; current allocated memory: 1.485 GB.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_runOnfpga_Pipeline_init_1_kp_in_ROM_AUTO_2R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_hw_findrange_n300_fxd_k_grid_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'runOnfpga_hw_sim_ihp_Pipeline_ihp_2_init_wealth_ROM_AUTO_2R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_hw_sim_ihp_kprime_new_RAM_AUTO_2R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_hw_sim_ast_kprime_interp0_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_sim_alm_coeff_x_good_v_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_agshock_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_idshock_V_RAM_1P_URAM_1R1W_ram (RAM_1P_URAM)' using ultra RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_st_kcross_RAM_AUTO_2R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_st_kprimes_RAM_1WNR_BRAM_2R1W_ram (RAM_1WnR_BRAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_st_kprimes_1_RAM_1WNR_BRAM_2R1W_ram (RAM_1WnR_BRAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_kmts_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_hw_ihp_iter_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'runOnfpga_kcross_l_RAM_S2P_BRAM_1R1W_ram (RAM_S2P_BRAM)' using block RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 22.56 seconds. CPU system time: 0.11 seconds. Elapsed time: 22.67 seconds; current allocated memory: 1.485 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.29 seconds; current allocated memory: 1.485 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for runOnfpga.
+INFO: [VLOG 209-307] Generating Verilog RTL for runOnfpga.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 309.91 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 198.51 seconds. CPU system time: 3.02 seconds. Elapsed time: 200.17 seconds; current allocated memory: 979.453 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dadd_64ns_64ns_64_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dadd_64ns_64ns_64_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dadd_64ns_64ns_64_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dadddsub_64ns_64ns_64_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dadddsub_64ns_64ns_64_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dadddsub_64ns_64ns_64_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dcmp_64ns_64ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dcmp_64ns_64ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dcmp_64ns_64ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_ddiv_64ns_64ns_64_31_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_ddiv_64ns_64ns_64_31_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_ddiv_64ns_64ns_64_31_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dexp_64ns_64ns_64_20_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dexp_64ns_64ns_64_20_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dexp_64ns_64ns_64_20_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dlog_64ns_64ns_64_39_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dlog_64ns_64ns_64_39_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dlog_64ns_64ns_64_39_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dmul_64ns_64ns_64_6_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dmul_64ns_64ns_64_6_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dmul_64ns_64ns_64_6_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dsqrt_64ns_64ns_64_21_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dsqrt_64ns_64ns_64_21_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dsqrt_64ns_64ns_64_21_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_dsub_64ns_64ns_64_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_dsub_64ns_64ns_64_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_dsub_64ns_64ns_64_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOnfpga_sitodp_32ns_64_4_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOnfpga_sitodp_32ns_64_4_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOnfpga_sitodp_32ns_64_4_no_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.2/data/ip'.
+Running package_xo -xo_path /home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution/impl/export.xo -kernel_name runOnfpga -kernel_xml /home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/centos/code/fpga/hw.cpp -ip_directory /home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution/impl/ip/ip_unzip_dir -design_xml /home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution/.autopilot/db/runOnfpga.design.xml -debug_directory /home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution/.debug -hls_directory /home/centos/code/_x/runOnfpga/runOnfpga/runOnfpga/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Fri May  3 18:21:40 2024...
+INFO: [HLS 200-802] Generated output file runOnfpga/solution/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 25.45 seconds. CPU system time: 1.88 seconds. Elapsed time: 25.01 seconds; current allocated memory: 0.000 MB.
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 224.95 seconds. Total CPU system time: 5.31 seconds. Total elapsed time: 226.34 seconds; peak allocated memory: 1.485 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri May  3 18:21:40 2024...

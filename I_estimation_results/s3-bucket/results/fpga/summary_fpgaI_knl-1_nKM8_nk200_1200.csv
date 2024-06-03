@@ -1,0 +1,176 @@
+Profile Summary
+Generated on: 2024-05-04 11:16:46
+Msec since Epoch: 1714821406562
+Profiled application: 1200_1ker_200k_8km
+Target platform: Xilinx
+Tool version: 2021.1
+XRT build version: 2.12.0
+Build version branch: 2021.2
+Build version hash: 723d9e7abbe3a2c374682dbb1a59c47f230f3ee2
+Build version date: N/A
+Target devices: xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0
+Flow mode: System Run
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clCreateBuffer,5,0.685649,0.018334,0.13713,0.300678,
+clCreateCommandQueue,1,0.008128,0.008128,0.008128,0.008128,
+clCreateContext,1,33.5375,33.5375,33.5375,33.5375,
+clCreateKernel,1,25.202,25.202,25.202,25.202,
+clCreateProgramWithBinary,1,68.1822,68.1822,68.1822,68.1822,
+clEnqueueMapBuffer,2,1.07991,0.056075,0.539956,1.02384,
+clEnqueueMigrateMemObjects,2400,66.4852,0.005188,0.0277022,3.66949,
+clEnqueueTask,1200,37.1556,0.021467,0.030963,0.141565,
+clFinish,1200,4.62779e+06,3856.26,3856.49,3861.66,
+clGetDeviceIDs,2,0.007678,0.002594,0.003839,0.005084,
+clGetDeviceInfo,2,15.1473,0.005311,7.57367,15.142,
+clGetExtensionFunctionAddress,2,0.031323,0.007583,0.0156615,0.02374,
+clGetExtensionFunctionAddressForPlatform,2,0.008892,0.002812,0.004446,0.00608,
+clGetPlatformInfo,14,0.033984,0.002096,0.00242743,0.004451,
+clReleaseCommandQueue,1,0.006595,0.006595,0.006595,0.006595,
+clReleaseContext,2,8.00475,0.003124,4.00238,8.00163,
+clReleaseDevice,3,0.011176,0.002673,0.00372533,0.004462,
+clReleaseEvent,3600,25.2691,0.002697,0.00701919,0.117651,
+clReleaseKernel,1,20.7436,20.7436,20.7436,20.7436,
+clReleaseMemObject,12005,44.9623,0.002207,0.0037453,0.13003,
+clReleaseProgram,1,16.4303,16.4303,16.4303,16.4303,
+clRetainContext,1,0.004099,0.004099,0.004099,0.004099,
+clRetainDevice,3,0.007521,0.002192,0.002507,0.002683,
+clRetainMemObject,12000,39.9129,0.002153,0.00332608,3.6544,
+clSetKernelArg,5,0.018113,0.002491,0.0036226,0.007422,
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+runOnfpga,1200,4.62725e+06,3856,3856.04,3858.88,
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,7897.05,3858.88,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,1.11623e+06,3858.77,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,3.68074e+06,3858.68,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,11801.3,3858.17,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,2.37137e+06,3857.72,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,1.00385e+06,3857.06,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,2.25127e+06,3857.01,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,3.80864e+06,3857,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,999946,3856.41,1:1:1,1:1:1,
+29805616,runOnfpga,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,1.12013e+06,3856.39,1:1:1,1:1:1,
+
+Top Memory Writes: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+34359738368,0,0,3.51416e+06,3.8438,1477.54,5679.36,
+34359738368,0,0,1.26351e+06,0.647908,1477.54,957.309,
+34359738368,0,0,2.2784e+06,0.514761,1477.54,760.579,
+34359738368,0,0,790681,0.493176,1477.54,728.686,
+34359738368,0,0,1.53465e+06,0.459165,1477.54,678.434,
+34359738368,0,0,1.68959e+06,0.450341,1477.54,665.396,
+34359738368,0,0,1.76706e+06,0.445212,1477.54,657.818,
+34359738368,0,0,1.71283e+06,0.444265,1477.54,656.418,
+34359738368,0,0,1.39908e+06,0.437592,1477.54,646.559,
+34359738368,0,0,1.22086e+06,0.436911,1477.54,645.553,
+
+Top Memory Reads: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+34361221120,0,0,2.37912e+06,3.81165,132.448,504.845,
+34361221120,0,0,3.01441e+06,3.77165,132.448,499.547,
+34361221120,0,0,511638,3.74729,132.448,496.322,
+34361221120,0,0,3.68071e+06,0.325059,132.448,43.0534,
+34361221120,0,0,515536,0.311534,132.448,41.2621,
+34361221120,0,0,2.37522e+06,0.295914,132.448,39.1932,
+34361221120,0,0,3.6846e+06,0.294599,132.448,39.019,
+34361221120,0,0,15659.6,0.291289,132.448,38.5806,
+34361221120,0,0,1.12399e+06,0.288739,132.448,38.2429,
+34361221120,0,0,1.12009e+06,0.277811,132.448,36.7955,
+
+Data Transfer: Host to Global Memory
+Context:Number of Devices,Transfer Type,Number Of Buffer Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Buffer Size (KB),Total Time (ms),Average Time (ms),
+context0:1,READ,1200,747.745,7.78901,132.448,212.556,0.17713,
+context0:1,WRITE,1200,4933.95,51.3953,1477.54,359.356,0.299464,
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Dataflow Execution,Max Overlapping Executions,Dataflow Acceleration,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,runOnfpga_1,runOnfpga,1:1:1,1:1:1,1200,Yes,1,1.000000x,4.53884e+06,3782.33,3782.37,3785.01,223,
+
+
+
+
+
+Data Transfer: Kernels to Global Memory
+Device,Compute Unit/Port Name,Kernel Arguments,Memory Resources,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Average Latency (ns),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,runOnfpga_1/m_axi_gmem0,hw_agshock|hw_idshock|preinit|results|hw_iter,DDR[0],WRITE,280800,1865.6,19.4333,0.562,68.6448,
+xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,runOnfpga_1/m_axi_gmem0,hw_agshock|hw_idshock|preinit|results|hw_iter,DDR[0],READ,1648886400,1575.1,16.4073,0.064,139.089,
+
+Top Data Transfer: Kernels to Global Memory
+Device,Compute Unit,Number of Transfers,Average Bytes per Transfer,Transfer Efficiency (%),Total Data Transfer (MB),Total Write (MB),Total Read (MB),Total Transfer Rate (MB/s),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,runOnfpga_1,1649167200,64.0849,1.56457,105687,157.992,105529,1575.47,
+
+
+
+Guidance Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,4.64903e+06,
+CU_CALLS,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|runOnfpga_1,1200,
+NUM_MONITORS,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|XCL_PERF_MON_MEMORY|1,1,
+NUM_MONITORS,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|XCL_PERF_MON_ACCEL|1,1,
+NUM_MONITORS,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|XCL_PERF_MON_STR|0,0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|DDR[0],1,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|DDR[1],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|DDR[2],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|DDR[3],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|PLRAM[0],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|PLRAM[1],0,
+MEMORY_USAGE,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|PLRAM[2],0,
+PLRAM_DEVICE,all,1,
+HBM_DEVICE,all,0,
+KDMA_DEVICE,all,0,
+P2P_DEVICE,all,0,
+PORT_BIT_WIDTH,runOnfpga_1/m_axi_gmem0,512,
+KERNEL_COUNT,runOnfpga,1,
+TRACE_MEMORY,all,FIFO,
+PLRAM_SIZE_BYTES,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,131072,
+TRACE_BUFFER_FULL,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0,false
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_3-0|PLRAM,512,
+APPLICATION_RUN_TIME_MS,all,4.64951e+06,
+MIGRATE_MEM,host,2400,
+P2P_HOST_TRANSFERS,host,0,
+OBJECTS_RELEASED,all,1,
+CU_CONTEXT_EN,all,0,
+MAX_PARALLEL_KERNEL_ENQUEUES,runOnfpga,1,
+COMMAND_QUEUE_OOO,27814272,1,
+KERNEL_BUFFER_INFO,runOnfpga|hw_agshock|DDR[0]|1,138,
+KERNEL_BUFFER_INFO,runOnfpga|hw_idshock|DDR[0]|1,1375000,
+KERNEL_BUFFER_INFO,runOnfpga|preinit|DDR[0]|0,102400,
+KERNEL_BUFFER_INFO,runOnfpga|results|DDR[0]|0,131248,
+KERNEL_BUFFER_INFO,runOnfpga|hw_iter|DDR[0]|1,1200,
+BUFFER_RD_ACTIVE_TIME_MS,all,212.556,
+BUFFER_WR_ACTIVE_TIME_MS,all,359.356,
+BUFFER_TX_ACTIVE_TIME_MS,all,4.64903e+06,
+TOTAL_KERNEL_RUN_TIME_MS,all,4.56037e+06,
+XRT_INI_SETTING,profile,1,Profiling (deprecated)
+XRT_INI_SETTING,opencl_summary,1,Generation of OpenCL summary report
+XRT_INI_SETTING,opencl_device_counter,1,Hardware counters added to OpenCL summary file
+XRT_INI_SETTING,timeline_trace,1,Timeline trace (deprecated)
+XRT_INI_SETTING,native_xrt_trace,0,Generation of Native XRT API function trace
+XRT_INI_SETTING,xrt_trace,0,Generation of hardware SHIM function trace
+XRT_INI_SETTING,xrt_profile,0,Equivalent to xrt_trace (deprecated)
+XRT_INI_SETTING,data_transfer_trace,coarse,Collection of data from PL monitors and added to summary and trace
+XRT_INI_SETTING,power_profile,0,Polling of power data during execution of application
+XRT_INI_SETTING,power_profile_interval_ms,20,Interval for reading power data (in ms)
+XRT_INI_SETTING,stall_trace,off,Enables hardware generation of stalls in compute units
+XRT_INI_SETTING,trace_buffer_size,1M,Size of buffer to allocate for trace (memory offload only)
+XRT_INI_SETTING,verbosity,4,Verbosity level
+XRT_INI_SETTING,continuous_trace,0,Continuous offloading of trace from memory to host
+XRT_INI_SETTING,continuous_trace_interval_ms,10,Interval for offloading trace (in ms; deprecated)
+XRT_INI_SETTING,trace_buffer_offload_interval_ms,10,Interval for reading of device data to host (in ms)
+XRT_INI_SETTING,lop_trace,0,Generation of lower overhead OpenCL trace. Should not be used with other OpenCL options.
+XRT_INI_SETTING,debug_mode,batch,Debug mode (emulation only)
+XRT_INI_SETTING,aie_trace,0,Generation of AI Engine trace
+XRT_INI_SETTING,aie_trace_buffer_size,8M,Size of buffer to allocate for AI Engine trace
+XRT_INI_SETTING,aie_trace_metrics,functions,Configuration level used for AI Engine trace
+XRT_INI_SETTING,aie_profile,0,Generation of AI Engine profiling
+XRT_INI_SETTING,aie_profile_interval_us,1000,Interval for reading AI Engine profile counters (in us)
+XRT_INI_SETTING,aie_profile_core_metrics,heat_map,Metric set for AI Engine core modules
+XRT_INI_SETTING,aie_profile_memory_metrics,conflicts,Metric set for AI Engine memory modules
+XRT_INI_SETTING,vitis_ai_profile,0,Generation of Vitis AI summary and trace (Vitis AI designs only)

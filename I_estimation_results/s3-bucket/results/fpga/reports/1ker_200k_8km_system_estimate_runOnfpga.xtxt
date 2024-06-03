@@ -1,0 +1,132 @@
+===============================================================================
+Version:    v++ v2021.2 (64-bit)
+Build:      SW Build 3363252 on 2021-10-14-04:41:01
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Thu May  2 07:23:41 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             runOnfpga
+Target Device:           xilinx:aws-vu9p-f1:shell-v04261818:201920.3
+Target Clock:            250.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+runOnfpga    c     fpga0:OCL_REGION_0  runOnfpga       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     runOnfpga
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                          Target Frequency  Estimated Frequency
+------------  -----------  -----------------------------------  ----------------  -------------------
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_1                 250               1042.75293
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_1            250               342.465759
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_2_2          250               342.465759
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_init_1            250               519.210815
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_init_2            250               619.195068
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_6                 250               558.971497
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_alm_1_alm_2       250               345.303864
+runOnfpga_1   runOnfpga    pow_generic_double_s                 250               342.935547
+runOnfpga_1   runOnfpga    hw_findrange_n8                      250               731.528931
+runOnfpga_1   runOnfpga    hw_findrange_n200                    250               343.288696
+runOnfpga_1   runOnfpga    hw_sim_ihp_Pipeline_ihp_2            250               342.935547
+runOnfpga_1   runOnfpga    hw_sim_ihp_Pipeline_ihp_5            250               345.303864
+runOnfpga_1   runOnfpga    hw_sim_ihp                           250               342.935547
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_ast_kcross        250               347.101685
+runOnfpga_1   runOnfpga    hw_sim_ast_Pipeline_ast_2_ast_3      250               345.303864
+runOnfpga_1   runOnfpga    hw_sim_ast_Pipeline_ast_4            250               343.288696
+runOnfpga_1   runOnfpga    hw_sim_ast                           250               343.288696
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_1             250               554.016663
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_2             250               554.016663
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_3             250               554.016663
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_4             250               554.016663
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_5             250               1215.06677
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_6             250               1215.06677
+runOnfpga_1   runOnfpga    regression                           250               323.834198
+runOnfpga_1   runOnfpga    sim_alm_coeff                        250               309.885345
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_VITIS_LOOP_227_2  250               363.636353
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_5            250               1215.06677
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_7            250               342.465759
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_10           250               342.465759
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_11           250               1042.75293
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_12           250               342.465759
+runOnfpga_1   runOnfpga    runOnfpga                            250               309.885345
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                          Start Interval   Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -----------------------------------  ---------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_1                 6                6              6             6               24.000 ns        24.000 ns       24.000 ns
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_1            211              211            211           211             0.844 us         0.844 us        0.844 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_2_2          undef            undef          undef         undef           undef            undef           undef
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_init_1            6403             6403           6403          6403            25.612 us        25.612 us       25.612 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_init_2            10002            10002          10002         10002           40.008 us        40.008 us       40.008 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_6                 302              302            302           302             1.208 us         1.208 us        1.208 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_alm_1_alm_2       90               90             90            90              0.360 us         0.360 us        0.360 us
+runOnfpga_1   runOnfpga    pow_generic_double_s                 1                78             78            78              0.312 us         0.312 us        0.312 us
+runOnfpga_1   runOnfpga    hw_findrange_n8                      1                0              0             0               0 ns             0 ns            0 ns
+runOnfpga_1   runOnfpga    hw_findrange_n200                    1                5              5             5               20.000 ns        20.000 ns       20.000 ns
+runOnfpga_1   runOnfpga    hw_sim_ihp_Pipeline_ihp_2            3424             3424           3424          3424            13.696 us        13.696 us       13.696 us
+runOnfpga_1   runOnfpga    hw_sim_ihp_Pipeline_ihp_5            6415             6415           6415          6415            25.660 us        25.660 us       25.660 us
+runOnfpga_1   runOnfpga    hw_sim_ihp                           9848 ~ 19694001  9848           1969401       19694001        39.392 us        7.878 ms        78.776 ms
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_ast_kcross        10005            10005          10005         10005           40.020 us        40.020 us       40.020 us
+runOnfpga_1   runOnfpga    hw_sim_ast_Pipeline_ast_2_ast_3      432              432            432           432             1.728 us         1.728 us        1.728 us
+runOnfpga_1   runOnfpga    hw_sim_ast_Pipeline_ast_4            1330             1330           1330          1330            5.320 us         5.320 us        5.320 us
+runOnfpga_1   runOnfpga    hw_sim_ast                           2005313          2005313        2005313       2005313         8.021 ms         8.021 ms        8.021 ms
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_1             1002             1002           1002          1002            4.008 us         4.008 us        4.008 us
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_2             1002             1002           1002          1002            4.008 us         4.008 us        4.008 us
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_3             1002             1002           1002          1002            4.008 us         4.008 us        4.008 us
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_4             1002             1002           1002          1002            4.008 us         4.008 us        4.008 us
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_5             4                4              4             4               16.000 ns        16.000 ns       16.000 ns
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_6             4                4              4             4               16.000 ns        16.000 ns       16.000 ns
+runOnfpga_1   runOnfpga    regression                           1455 ~ 64057     1455           19322         64057           5.820 us         77.288 us       0.256 ms
+runOnfpga_1   runOnfpga    sim_alm_coeff                        5990 ~ 188662    5990           72365         188662          23.960 us        0.289 ms        0.755 ms
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_VITIS_LOOP_227_2  10002            10002          10002         10002           40.008 us        40.008 us       40.008 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_5            4                4              4             4               16.000 ns        16.000 ns       16.000 ns
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_7            6471             6471           6471          6471            25.884 us        25.884 us       25.884 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_10           10071            10071          10071         10071           40.284 us        40.284 us       40.284 us
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_11           6                6              6             6               24.000 ns        24.000 ns       24.000 ns
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_12           undef            undef          undef         undef           undef            undef           undef
+runOnfpga_1   runOnfpga    runOnfpga                            undef            undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name                          FF      LUT     DSP  BRAM  URAM
+------------  -----------  -----------------------------------  ------  ------  ---  ----  ----
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_1                 261     72      0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_1            939     2474    0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_2_2          4983    18634   0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_init_1            44      76      0    32    0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_init_2            16      66      0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_6                 11      60      0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_alm_1_alm_2       3104    3027    0    0     0
+runOnfpga_1   runOnfpga    pow_generic_double_s                 14016   14812   0    5     0
+runOnfpga_1   runOnfpga    hw_findrange_n8                      0       207     0    0     0
+runOnfpga_1   runOnfpga    hw_findrange_n200                    240     1311    0    12    0
+runOnfpga_1   runOnfpga    hw_sim_ihp_Pipeline_ihp_2            159427  159917  0    72    0
+runOnfpga_1   runOnfpga    hw_sim_ihp_Pipeline_ihp_5            516     140     0    0     0
+runOnfpga_1   runOnfpga    hw_sim_ihp                           160515  163708  0    104   0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_ast_kcross        384     1182    0    0     0
+runOnfpga_1   runOnfpga    hw_sim_ast_Pipeline_ast_2_ast_3      2414    668     0    0     0
+runOnfpga_1   runOnfpga    hw_sim_ast_Pipeline_ast_4            29870   78977   0    72    0
+runOnfpga_1   runOnfpga    hw_sim_ast                           34332   88317   0    104   0
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_1             12      61      0    0     0
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_2             12      61      0    0     0
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_3             12      61      0    0     0
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_4             12      61      0    0     0
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_5             132     176     0    0     0
+runOnfpga_1   runOnfpga    sim_alm_coeff_Pipeline_6             132     176     0    0     0
+runOnfpga_1   runOnfpga    regression                           4409    3148    0    0     0
+runOnfpga_1   runOnfpga    sim_alm_coeff                        15265   11494   0    16    0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_VITIS_LOOP_227_2  31      120     0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_5            133     124     0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_7            664     857     0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_10           665     858     0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_11           262     83      0    0     0
+runOnfpga_1   runOnfpga    runOnfpga_Pipeline_main_12           879     3361    0    0     0
+runOnfpga_1   runOnfpga    runOnfpga                            266399  352577  0    1161  13
+-------------------------------------------------------------------------------

@@ -1,0 +1,65 @@
+AFI          0       agfi-0a85a225b7917c99d  loaded            0        ok               0       0x04261818
+AFIDEVICE    0       0x1d0f      0xf010      0000:00:1d.0
+sdacl-slave-timeout=0
+virtual-jtag-slave-timeout=0
+ocl-slave-timeout=0
+bar1-slave-timeout=0
+dma-pcis-timeout=0
+pcim-range-error=0
+pcim-axi-protocol-error=0
+dma-range-error=0
+pcim-axi-protocol-4K-cross-error=0
+pcim-axi-protocol-bus-master-enable-error=0
+pcim-axi-protocol-request-size-error=0
+pcim-axi-protocol-write-incomplete-error=0
+pcim-axi-protocol-first-byte-enable-error=0
+pcim-axi-protocol-last-byte-enable-error=0
+pcim-axi-protocol-bready-error=0
+pcim-axi-protocol-rready-error=0
+pcim-axi-protocol-wchannel-error=0
+sdacl-slave-timeout-addr=0x0
+sdacl-slave-timeout-count=0
+virtual-jtag-slave-timeout-addr=0x0
+virtual-jtag-slave-timeout-count=0
+ocl-slave-timeout-addr=0x0
+ocl-slave-timeout-count=0
+bar1-slave-timeout-addr=0x0
+bar1-slave-timeout-count=0
+dma-pcis-timeout-addr=0x0
+dma-pcis-timeout-count=0
+pcim-range-error-addr=0x0
+pcim-range-error-count=0
+pcim-axi-protocol-error-addr=0x0
+pcim-axi-protocol-error-count=0
+pcim-write-count=0
+pcim-read-count=0
+DDR0
+   write-count=0
+   read-count=0
+DDR1
+   write-count=0
+   read-count=0
+DDR2
+   write-count=31729200
+   read-count=1651848000
+DDR3
+   write-count=0
+   read-count=0
+Clock Group A Frequency (Mhz)
+250  250  250  250  
+Clock Group B Frequency (Mhz)
+196  196  
+Clock Group C Frequency (Mhz)
+500  500  
+Power consumption (Vccint):
+   Last measured: 18 watts
+   Average: 14 watts
+   Max measured: 18 watts
+Cached agfis:
+   agfi-0a85a225b7917c99d
+   agfi-029f695ce3473d3ea
+   agfi-04d6298fb9c7a96e5
+   agfi-054e632d2f6aa1147
+   agfi-0b4a7b45cecfdcd85
+   agfi-06398aaa7efc69ac1
+   agfi-0b0a6e57466f100fc

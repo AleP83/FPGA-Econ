@@ -1,0 +1,1823 @@
+K-S app start
+Found Platform
+Platform Name: Xilinx
+Initializing OpenCL objects
+Creating Context[0]...
+INFO: Reading ./executables/fpga/fpga_afi/baseline_1ker_100k_4km.awsxclbin
+Loading: './executables/fpga/fpga_afi/baseline_1ker_100k_4km.awsxclbin'
+Creating Buffers[0] [0]...
+Comleted Setting Arguments
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=0 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=0 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=0 d=0 k=0 Bad R2: 0.999929637731257
+i=0 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=0 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=0 d=0 k=0 Good R2: 0.999975878439017
+
+i=0 d=0 k=0 Total EGM iter: 36019
+i=0 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=1 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=1 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=1 d=0 k=0 Bad R2: 0.999929637731257
+i=1 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=1 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=1 d=0 k=0 Good R2: 0.999975878439017
+
+i=1 d=0 k=0 Total EGM iter: 36019
+i=1 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=2 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=2 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=2 d=0 k=0 Bad R2: 0.999929637731257
+i=2 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=2 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=2 d=0 k=0 Good R2: 0.999975878439017
+
+i=2 d=0 k=0 Total EGM iter: 36019
+i=2 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=3 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=3 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=3 d=0 k=0 Bad R2: 0.999929637731257
+i=3 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=3 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=3 d=0 k=0 Good R2: 0.999975878439017
+
+i=3 d=0 k=0 Total EGM iter: 36019
+i=3 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=4 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=4 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=4 d=0 k=0 Bad R2: 0.999929637731257
+i=4 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=4 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=4 d=0 k=0 Good R2: 0.999975878439017
+
+i=4 d=0 k=0 Total EGM iter: 36019
+i=4 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=5 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=5 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=5 d=0 k=0 Bad R2: 0.999929637731257
+i=5 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=5 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=5 d=0 k=0 Good R2: 0.999975878439017
+
+i=5 d=0 k=0 Total EGM iter: 36019
+i=5 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=6 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=6 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=6 d=0 k=0 Bad R2: 0.999929637731257
+i=6 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=6 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=6 d=0 k=0 Good R2: 0.999975878439017
+
+i=6 d=0 k=0 Total EGM iter: 36019
+i=6 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=7 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=7 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=7 d=0 k=0 Bad R2: 0.999929637731257
+i=7 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=7 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=7 d=0 k=0 Good R2: 0.999975878439017
+
+i=7 d=0 k=0 Total EGM iter: 36019
+i=7 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=8 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=8 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=8 d=0 k=0 Bad R2: 0.999929637731257
+i=8 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=8 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=8 d=0 k=0 Good R2: 0.999975878439017
+
+i=8 d=0 k=0 Total EGM iter: 36019
+i=8 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=9 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=9 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=9 d=0 k=0 Bad R2: 0.999929637731257
+i=9 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=9 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=9 d=0 k=0 Good R2: 0.999975878439017
+
+i=9 d=0 k=0 Total EGM iter: 36019
+i=9 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=10 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=10 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=10 d=0 k=0 Bad R2: 0.999929637731257
+i=10 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=10 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=10 d=0 k=0 Good R2: 0.999975878439017
+
+i=10 d=0 k=0 Total EGM iter: 36019
+i=10 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=11 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=11 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=11 d=0 k=0 Bad R2: 0.999929637731257
+i=11 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=11 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=11 d=0 k=0 Good R2: 0.999975878439017
+
+i=11 d=0 k=0 Total EGM iter: 36019
+i=11 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=12 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=12 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=12 d=0 k=0 Bad R2: 0.999929637731257
+i=12 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=12 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=12 d=0 k=0 Good R2: 0.999975878439017
+
+i=12 d=0 k=0 Total EGM iter: 36019
+i=12 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=13 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=13 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=13 d=0 k=0 Bad R2: 0.999929637731257
+i=13 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=13 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=13 d=0 k=0 Good R2: 0.999975878439017
+
+i=13 d=0 k=0 Total EGM iter: 36019
+i=13 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=14 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=14 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=14 d=0 k=0 Bad R2: 0.999929637731257
+i=14 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=14 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=14 d=0 k=0 Good R2: 0.999975878439017
+
+i=14 d=0 k=0 Total EGM iter: 36019
+i=14 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=15 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=15 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=15 d=0 k=0 Bad R2: 0.999929637731257
+i=15 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=15 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=15 d=0 k=0 Good R2: 0.999975878439017
+
+i=15 d=0 k=0 Total EGM iter: 36019
+i=15 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=16 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=16 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=16 d=0 k=0 Bad R2: 0.999929637731257
+i=16 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=16 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=16 d=0 k=0 Good R2: 0.999975878439017
+
+i=16 d=0 k=0 Total EGM iter: 36019
+i=16 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=17 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=17 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=17 d=0 k=0 Bad R2: 0.999929637731257
+i=17 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=17 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=17 d=0 k=0 Good R2: 0.999975878439017
+
+i=17 d=0 k=0 Total EGM iter: 36019
+i=17 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=18 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=18 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=18 d=0 k=0 Bad R2: 0.999929637731257
+i=18 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=18 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=18 d=0 k=0 Good R2: 0.999975878439017
+
+i=18 d=0 k=0 Total EGM iter: 36019
+i=18 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=19 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=19 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=19 d=0 k=0 Bad R2: 0.999929637731257
+i=19 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=19 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=19 d=0 k=0 Good R2: 0.999975878439017
+
+i=19 d=0 k=0 Total EGM iter: 36019
+i=19 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=20 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=20 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=20 d=0 k=0 Bad R2: 0.999929637731257
+i=20 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=20 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=20 d=0 k=0 Good R2: 0.999975878439017
+
+i=20 d=0 k=0 Total EGM iter: 36019
+i=20 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=21 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=21 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=21 d=0 k=0 Bad R2: 0.999929637731257
+i=21 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=21 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=21 d=0 k=0 Good R2: 0.999975878439017
+
+i=21 d=0 k=0 Total EGM iter: 36019
+i=21 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=22 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=22 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=22 d=0 k=0 Bad R2: 0.999929637731257
+i=22 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=22 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=22 d=0 k=0 Good R2: 0.999975878439017
+
+i=22 d=0 k=0 Total EGM iter: 36019
+i=22 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=23 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=23 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=23 d=0 k=0 Bad R2: 0.999929637731257
+i=23 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=23 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=23 d=0 k=0 Good R2: 0.999975878439017
+
+i=23 d=0 k=0 Total EGM iter: 36019
+i=23 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=24 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=24 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=24 d=0 k=0 Bad R2: 0.999929637731257
+i=24 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=24 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=24 d=0 k=0 Good R2: 0.999975878439017
+
+i=24 d=0 k=0 Total EGM iter: 36019
+i=24 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=25 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=25 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=25 d=0 k=0 Bad R2: 0.999929637731257
+i=25 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=25 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=25 d=0 k=0 Good R2: 0.999975878439017
+
+i=25 d=0 k=0 Total EGM iter: 36019
+i=25 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=26 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=26 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=26 d=0 k=0 Bad R2: 0.999929637731257
+i=26 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=26 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=26 d=0 k=0 Good R2: 0.999975878439017
+
+i=26 d=0 k=0 Total EGM iter: 36019
+i=26 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=27 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=27 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=27 d=0 k=0 Bad R2: 0.999929637731257
+i=27 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=27 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=27 d=0 k=0 Good R2: 0.999975878439017
+
+i=27 d=0 k=0 Total EGM iter: 36019
+i=27 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=28 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=28 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=28 d=0 k=0 Bad R2: 0.999929637731257
+i=28 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=28 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=28 d=0 k=0 Good R2: 0.999975878439017
+
+i=28 d=0 k=0 Total EGM iter: 36019
+i=28 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=29 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=29 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=29 d=0 k=0 Bad R2: 0.999929637731257
+i=29 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=29 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=29 d=0 k=0 Good R2: 0.999975878439017
+
+i=29 d=0 k=0 Total EGM iter: 36019
+i=29 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=30 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=30 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=30 d=0 k=0 Bad R2: 0.999929637731257
+i=30 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=30 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=30 d=0 k=0 Good R2: 0.999975878439017
+
+i=30 d=0 k=0 Total EGM iter: 36019
+i=30 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=31 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=31 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=31 d=0 k=0 Bad R2: 0.999929637731257
+i=31 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=31 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=31 d=0 k=0 Good R2: 0.999975878439017
+
+i=31 d=0 k=0 Total EGM iter: 36019
+i=31 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=32 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=32 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=32 d=0 k=0 Bad R2: 0.999929637731257
+i=32 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=32 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=32 d=0 k=0 Good R2: 0.999975878439017
+
+i=32 d=0 k=0 Total EGM iter: 36019
+i=32 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=33 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=33 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=33 d=0 k=0 Bad R2: 0.999929637731257
+i=33 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=33 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=33 d=0 k=0 Good R2: 0.999975878439017
+
+i=33 d=0 k=0 Total EGM iter: 36019
+i=33 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=34 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=34 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=34 d=0 k=0 Bad R2: 0.999929637731257
+i=34 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=34 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=34 d=0 k=0 Good R2: 0.999975878439017
+
+i=34 d=0 k=0 Total EGM iter: 36019
+i=34 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=35 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=35 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=35 d=0 k=0 Bad R2: 0.999929637731257
+i=35 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=35 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=35 d=0 k=0 Good R2: 0.999975878439017
+
+i=35 d=0 k=0 Total EGM iter: 36019
+i=35 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=36 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=36 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=36 d=0 k=0 Bad R2: 0.999929637731257
+i=36 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=36 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=36 d=0 k=0 Good R2: 0.999975878439017
+
+i=36 d=0 k=0 Total EGM iter: 36019
+i=36 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=37 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=37 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=37 d=0 k=0 Bad R2: 0.999929637731257
+i=37 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=37 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=37 d=0 k=0 Good R2: 0.999975878439017
+
+i=37 d=0 k=0 Total EGM iter: 36019
+i=37 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=38 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=38 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=38 d=0 k=0 Bad R2: 0.999929637731257
+i=38 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=38 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=38 d=0 k=0 Good R2: 0.999975878439017
+
+i=38 d=0 k=0 Total EGM iter: 36019
+i=38 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=39 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=39 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=39 d=0 k=0 Bad R2: 0.999929637731257
+i=39 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=39 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=39 d=0 k=0 Good R2: 0.999975878439017
+
+i=39 d=0 k=0 Total EGM iter: 36019
+i=39 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=40 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=40 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=40 d=0 k=0 Bad R2: 0.999929637731257
+i=40 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=40 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=40 d=0 k=0 Good R2: 0.999975878439017
+
+i=40 d=0 k=0 Total EGM iter: 36019
+i=40 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=41 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=41 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=41 d=0 k=0 Bad R2: 0.999929637731257
+i=41 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=41 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=41 d=0 k=0 Good R2: 0.999975878439017
+
+i=41 d=0 k=0 Total EGM iter: 36019
+i=41 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=42 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=42 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=42 d=0 k=0 Bad R2: 0.999929637731257
+i=42 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=42 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=42 d=0 k=0 Good R2: 0.999975878439017
+
+i=42 d=0 k=0 Total EGM iter: 36019
+i=42 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=43 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=43 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=43 d=0 k=0 Bad R2: 0.999929637731257
+i=43 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=43 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=43 d=0 k=0 Good R2: 0.999975878439017
+
+i=43 d=0 k=0 Total EGM iter: 36019
+i=43 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=44 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=44 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=44 d=0 k=0 Bad R2: 0.999929637731257
+i=44 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=44 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=44 d=0 k=0 Good R2: 0.999975878439017
+
+i=44 d=0 k=0 Total EGM iter: 36019
+i=44 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=45 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=45 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=45 d=0 k=0 Bad R2: 0.999929637731257
+i=45 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=45 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=45 d=0 k=0 Good R2: 0.999975878439017
+
+i=45 d=0 k=0 Total EGM iter: 36019
+i=45 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=46 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=46 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=46 d=0 k=0 Bad R2: 0.999929637731257
+i=46 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=46 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=46 d=0 k=0 Good R2: 0.999975878439017
+
+i=46 d=0 k=0 Total EGM iter: 36019
+i=46 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=47 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=47 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=47 d=0 k=0 Bad R2: 0.999929637731257
+i=47 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=47 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=47 d=0 k=0 Good R2: 0.999975878439017
+
+i=47 d=0 k=0 Total EGM iter: 36019
+i=47 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=48 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=48 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=48 d=0 k=0 Bad R2: 0.999929637731257
+i=48 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=48 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=48 d=0 k=0 Good R2: 0.999975878439017
+
+i=48 d=0 k=0 Total EGM iter: 36019
+i=48 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=49 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=49 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=49 d=0 k=0 Bad R2: 0.999929637731257
+i=49 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=49 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=49 d=0 k=0 Good R2: 0.999975878439017
+
+i=49 d=0 k=0 Total EGM iter: 36019
+i=49 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=50 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=50 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=50 d=0 k=0 Bad R2: 0.999929637731257
+i=50 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=50 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=50 d=0 k=0 Good R2: 0.999975878439017
+
+i=50 d=0 k=0 Total EGM iter: 36019
+i=50 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=51 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=51 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=51 d=0 k=0 Bad R2: 0.999929637731257
+i=51 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=51 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=51 d=0 k=0 Good R2: 0.999975878439017
+
+i=51 d=0 k=0 Total EGM iter: 36019
+i=51 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=52 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=52 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=52 d=0 k=0 Bad R2: 0.999929637731257
+i=52 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=52 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=52 d=0 k=0 Good R2: 0.999975878439017
+
+i=52 d=0 k=0 Total EGM iter: 36019
+i=52 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=53 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=53 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=53 d=0 k=0 Bad R2: 0.999929637731257
+i=53 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=53 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=53 d=0 k=0 Good R2: 0.999975878439017
+
+i=53 d=0 k=0 Total EGM iter: 36019
+i=53 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=54 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=54 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=54 d=0 k=0 Bad R2: 0.999929637731257
+i=54 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=54 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=54 d=0 k=0 Good R2: 0.999975878439017
+
+i=54 d=0 k=0 Total EGM iter: 36019
+i=54 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=55 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=55 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=55 d=0 k=0 Bad R2: 0.999929637731257
+i=55 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=55 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=55 d=0 k=0 Good R2: 0.999975878439017
+
+i=55 d=0 k=0 Total EGM iter: 36019
+i=55 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=56 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=56 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=56 d=0 k=0 Bad R2: 0.999929637731257
+i=56 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=56 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=56 d=0 k=0 Good R2: 0.999975878439017
+
+i=56 d=0 k=0 Total EGM iter: 36019
+i=56 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=57 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=57 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=57 d=0 k=0 Bad R2: 0.999929637731257
+i=57 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=57 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=57 d=0 k=0 Good R2: 0.999975878439017
+
+i=57 d=0 k=0 Total EGM iter: 36019
+i=57 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=58 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=58 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=58 d=0 k=0 Bad R2: 0.999929637731257
+i=58 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=58 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=58 d=0 k=0 Good R2: 0.999975878439017
+
+i=58 d=0 k=0 Total EGM iter: 36019
+i=58 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=59 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=59 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=59 d=0 k=0 Bad R2: 0.999929637731257
+i=59 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=59 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=59 d=0 k=0 Good R2: 0.999975878439017
+
+i=59 d=0 k=0 Total EGM iter: 36019
+i=59 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=60 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=60 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=60 d=0 k=0 Bad R2: 0.999929637731257
+i=60 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=60 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=60 d=0 k=0 Good R2: 0.999975878439017
+
+i=60 d=0 k=0 Total EGM iter: 36019
+i=60 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=61 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=61 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=61 d=0 k=0 Bad R2: 0.999929637731257
+i=61 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=61 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=61 d=0 k=0 Good R2: 0.999975878439017
+
+i=61 d=0 k=0 Total EGM iter: 36019
+i=61 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=62 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=62 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=62 d=0 k=0 Bad R2: 0.999929637731257
+i=62 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=62 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=62 d=0 k=0 Good R2: 0.999975878439017
+
+i=62 d=0 k=0 Total EGM iter: 36019
+i=62 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=63 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=63 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=63 d=0 k=0 Bad R2: 0.999929637731257
+i=63 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=63 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=63 d=0 k=0 Good R2: 0.999975878439017
+
+i=63 d=0 k=0 Total EGM iter: 36019
+i=63 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=64 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=64 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=64 d=0 k=0 Bad R2: 0.999929637731257
+i=64 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=64 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=64 d=0 k=0 Good R2: 0.999975878439017
+
+i=64 d=0 k=0 Total EGM iter: 36019
+i=64 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=65 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=65 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=65 d=0 k=0 Bad R2: 0.999929637731257
+i=65 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=65 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=65 d=0 k=0 Good R2: 0.999975878439017
+
+i=65 d=0 k=0 Total EGM iter: 36019
+i=65 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=66 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=66 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=66 d=0 k=0 Bad R2: 0.999929637731257
+i=66 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=66 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=66 d=0 k=0 Good R2: 0.999975878439017
+
+i=66 d=0 k=0 Total EGM iter: 36019
+i=66 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=67 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=67 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=67 d=0 k=0 Bad R2: 0.999929637731257
+i=67 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=67 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=67 d=0 k=0 Good R2: 0.999975878439017
+
+i=67 d=0 k=0 Total EGM iter: 36019
+i=67 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=68 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=68 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=68 d=0 k=0 Bad R2: 0.999929637731257
+i=68 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=68 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=68 d=0 k=0 Good R2: 0.999975878439017
+
+i=68 d=0 k=0 Total EGM iter: 36019
+i=68 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=69 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=69 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=69 d=0 k=0 Bad R2: 0.999929637731257
+i=69 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=69 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=69 d=0 k=0 Good R2: 0.999975878439017
+
+i=69 d=0 k=0 Total EGM iter: 36019
+i=69 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=70 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=70 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=70 d=0 k=0 Bad R2: 0.999929637731257
+i=70 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=70 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=70 d=0 k=0 Good R2: 0.999975878439017
+
+i=70 d=0 k=0 Total EGM iter: 36019
+i=70 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=71 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=71 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=71 d=0 k=0 Bad R2: 0.999929637731257
+i=71 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=71 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=71 d=0 k=0 Good R2: 0.999975878439017
+
+i=71 d=0 k=0 Total EGM iter: 36019
+i=71 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=72 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=72 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=72 d=0 k=0 Bad R2: 0.999929637731257
+i=72 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=72 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=72 d=0 k=0 Good R2: 0.999975878439017
+
+i=72 d=0 k=0 Total EGM iter: 36019
+i=72 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=73 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=73 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=73 d=0 k=0 Bad R2: 0.999929637731257
+i=73 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=73 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=73 d=0 k=0 Good R2: 0.999975878439017
+
+i=73 d=0 k=0 Total EGM iter: 36019
+i=73 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=74 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=74 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=74 d=0 k=0 Bad R2: 0.999929637731257
+i=74 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=74 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=74 d=0 k=0 Good R2: 0.999975878439017
+
+i=74 d=0 k=0 Total EGM iter: 36019
+i=74 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=75 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=75 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=75 d=0 k=0 Bad R2: 0.999929637731257
+i=75 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=75 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=75 d=0 k=0 Good R2: 0.999975878439017
+
+i=75 d=0 k=0 Total EGM iter: 36019
+i=75 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=76 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=76 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=76 d=0 k=0 Bad R2: 0.999929637731257
+i=76 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=76 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=76 d=0 k=0 Good R2: 0.999975878439017
+
+i=76 d=0 k=0 Total EGM iter: 36019
+i=76 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=77 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=77 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=77 d=0 k=0 Bad R2: 0.999929637731257
+i=77 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=77 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=77 d=0 k=0 Good R2: 0.999975878439017
+
+i=77 d=0 k=0 Total EGM iter: 36019
+i=77 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=78 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=78 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=78 d=0 k=0 Bad R2: 0.999929637731257
+i=78 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=78 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=78 d=0 k=0 Good R2: 0.999975878439017
+
+i=78 d=0 k=0 Total EGM iter: 36019
+i=78 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=79 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=79 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=79 d=0 k=0 Bad R2: 0.999929637731257
+i=79 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=79 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=79 d=0 k=0 Good R2: 0.999975878439017
+
+i=79 d=0 k=0 Total EGM iter: 36019
+i=79 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=80 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=80 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=80 d=0 k=0 Bad R2: 0.999929637731257
+i=80 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=80 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=80 d=0 k=0 Good R2: 0.999975878439017
+
+i=80 d=0 k=0 Total EGM iter: 36019
+i=80 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=81 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=81 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=81 d=0 k=0 Bad R2: 0.999929637731257
+i=81 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=81 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=81 d=0 k=0 Good R2: 0.999975878439017
+
+i=81 d=0 k=0 Total EGM iter: 36019
+i=81 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=82 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=82 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=82 d=0 k=0 Bad R2: 0.999929637731257
+i=82 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=82 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=82 d=0 k=0 Good R2: 0.999975878439017
+
+i=82 d=0 k=0 Total EGM iter: 36019
+i=82 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=83 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=83 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=83 d=0 k=0 Bad R2: 0.999929637731257
+i=83 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=83 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=83 d=0 k=0 Good R2: 0.999975878439017
+
+i=83 d=0 k=0 Total EGM iter: 36019
+i=83 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=84 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=84 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=84 d=0 k=0 Bad R2: 0.999929637731257
+i=84 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=84 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=84 d=0 k=0 Good R2: 0.999975878439017
+
+i=84 d=0 k=0 Total EGM iter: 36019
+i=84 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=85 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=85 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=85 d=0 k=0 Bad R2: 0.999929637731257
+i=85 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=85 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=85 d=0 k=0 Good R2: 0.999975878439017
+
+i=85 d=0 k=0 Total EGM iter: 36019
+i=85 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=86 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=86 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=86 d=0 k=0 Bad R2: 0.999929637731257
+i=86 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=86 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=86 d=0 k=0 Good R2: 0.999975878439017
+
+i=86 d=0 k=0 Total EGM iter: 36019
+i=86 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=87 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=87 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=87 d=0 k=0 Bad R2: 0.999929637731257
+i=87 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=87 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=87 d=0 k=0 Good R2: 0.999975878439017
+
+i=87 d=0 k=0 Total EGM iter: 36019
+i=87 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=88 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=88 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=88 d=0 k=0 Bad R2: 0.999929637731257
+i=88 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=88 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=88 d=0 k=0 Good R2: 0.999975878439017
+
+i=88 d=0 k=0 Total EGM iter: 36019
+i=88 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=89 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=89 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=89 d=0 k=0 Bad R2: 0.999929637731257
+i=89 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=89 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=89 d=0 k=0 Good R2: 0.999975878439017
+
+i=89 d=0 k=0 Total EGM iter: 36019
+i=89 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=90 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=90 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=90 d=0 k=0 Bad R2: 0.999929637731257
+i=90 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=90 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=90 d=0 k=0 Good R2: 0.999975878439017
+
+i=90 d=0 k=0 Total EGM iter: 36019
+i=90 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=91 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=91 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=91 d=0 k=0 Bad R2: 0.999929637731257
+i=91 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=91 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=91 d=0 k=0 Good R2: 0.999975878439017
+
+i=91 d=0 k=0 Total EGM iter: 36019
+i=91 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=92 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=92 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=92 d=0 k=0 Bad R2: 0.999929637731257
+i=92 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=92 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=92 d=0 k=0 Good R2: 0.999975878439017
+
+i=92 d=0 k=0 Total EGM iter: 36019
+i=92 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=93 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=93 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=93 d=0 k=0 Bad R2: 0.999929637731257
+i=93 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=93 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=93 d=0 k=0 Good R2: 0.999975878439017
+
+i=93 d=0 k=0 Total EGM iter: 36019
+i=93 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=94 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=94 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=94 d=0 k=0 Bad R2: 0.999929637731257
+i=94 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=94 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=94 d=0 k=0 Good R2: 0.999975878439017
+
+i=94 d=0 k=0 Total EGM iter: 36019
+i=94 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=95 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=95 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=95 d=0 k=0 Bad R2: 0.999929637731257
+i=95 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=95 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=95 d=0 k=0 Good R2: 0.999975878439017
+
+i=95 d=0 k=0 Total EGM iter: 36019
+i=95 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=96 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=96 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=96 d=0 k=0 Bad R2: 0.999929637731257
+i=96 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=96 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=96 d=0 k=0 Good R2: 0.999975878439017
+
+i=96 d=0 k=0 Total EGM iter: 36019
+i=96 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=97 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=97 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=97 d=0 k=0 Bad R2: 0.999929637731257
+i=97 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=97 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=97 d=0 k=0 Good R2: 0.999975878439017
+
+i=97 d=0 k=0 Total EGM iter: 36019
+i=97 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=98 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=98 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=98 d=0 k=0 Bad R2: 0.999929637731257
+i=98 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=98 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=98 d=0 k=0 Good R2: 0.999975878439017
+
+i=98 d=0 k=0 Total EGM iter: 36019
+i=98 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=99 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=99 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=99 d=0 k=0 Bad R2: 0.999929637731257
+i=99 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=99 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=99 d=0 k=0 Good R2: 0.999975878439017
+
+i=99 d=0 k=0 Total EGM iter: 36019
+i=99 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=100 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=100 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=100 d=0 k=0 Bad R2: 0.999929637731257
+i=100 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=100 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=100 d=0 k=0 Good R2: 0.999975878439017
+
+i=100 d=0 k=0 Total EGM iter: 36019
+i=100 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=101 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=101 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=101 d=0 k=0 Bad R2: 0.999929637731257
+i=101 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=101 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=101 d=0 k=0 Good R2: 0.999975878439017
+
+i=101 d=0 k=0 Total EGM iter: 36019
+i=101 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=102 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=102 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=102 d=0 k=0 Bad R2: 0.999929637731257
+i=102 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=102 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=102 d=0 k=0 Good R2: 0.999975878439017
+
+i=102 d=0 k=0 Total EGM iter: 36019
+i=102 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=103 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=103 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=103 d=0 k=0 Bad R2: 0.999929637731257
+i=103 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=103 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=103 d=0 k=0 Good R2: 0.999975878439017
+
+i=103 d=0 k=0 Total EGM iter: 36019
+i=103 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=104 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=104 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=104 d=0 k=0 Bad R2: 0.999929637731257
+i=104 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=104 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=104 d=0 k=0 Good R2: 0.999975878439017
+
+i=104 d=0 k=0 Total EGM iter: 36019
+i=104 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=105 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=105 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=105 d=0 k=0 Bad R2: 0.999929637731257
+i=105 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=105 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=105 d=0 k=0 Good R2: 0.999975878439017
+
+i=105 d=0 k=0 Total EGM iter: 36019
+i=105 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=106 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=106 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=106 d=0 k=0 Bad R2: 0.999929637731257
+i=106 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=106 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=106 d=0 k=0 Good R2: 0.999975878439017
+
+i=106 d=0 k=0 Total EGM iter: 36019
+i=106 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=107 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=107 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=107 d=0 k=0 Bad R2: 0.999929637731257
+i=107 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=107 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=107 d=0 k=0 Good R2: 0.999975878439017
+
+i=107 d=0 k=0 Total EGM iter: 36019
+i=107 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=108 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=108 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=108 d=0 k=0 Bad R2: 0.999929637731257
+i=108 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=108 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=108 d=0 k=0 Good R2: 0.999975878439017
+
+i=108 d=0 k=0 Total EGM iter: 36019
+i=108 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=109 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=109 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=109 d=0 k=0 Bad R2: 0.999929637731257
+i=109 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=109 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=109 d=0 k=0 Good R2: 0.999975878439017
+
+i=109 d=0 k=0 Total EGM iter: 36019
+i=109 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.74s.
+Migrating buffers from kernel
+i=110 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=110 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=110 d=0 k=0 Bad R2: 0.999929637731257
+i=110 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=110 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=110 d=0 k=0 Good R2: 0.999975878439017
+
+i=110 d=0 k=0 Total EGM iter: 36019
+i=110 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=111 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=111 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=111 d=0 k=0 Bad R2: 0.999929637731257
+i=111 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=111 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=111 d=0 k=0 Good R2: 0.999975878439017
+
+i=111 d=0 k=0 Total EGM iter: 36019
+i=111 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=112 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=112 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=112 d=0 k=0 Bad R2: 0.999929637731257
+i=112 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=112 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=112 d=0 k=0 Good R2: 0.999975878439017
+
+i=112 d=0 k=0 Total EGM iter: 36019
+i=112 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.736s.
+Migrating buffers from kernel
+i=113 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=113 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=113 d=0 k=0 Bad R2: 0.999929637731257
+i=113 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=113 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=113 d=0 k=0 Good R2: 0.999975878439017
+
+i=113 d=0 k=0 Total EGM iter: 36019
+i=113 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=114 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=114 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=114 d=0 k=0 Bad R2: 0.999929637731257
+i=114 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=114 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=114 d=0 k=0 Good R2: 0.999975878439017
+
+i=114 d=0 k=0 Total EGM iter: 36019
+i=114 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=115 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=115 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=115 d=0 k=0 Bad R2: 0.999929637731257
+i=115 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=115 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=115 d=0 k=0 Good R2: 0.999975878439017
+
+i=115 d=0 k=0 Total EGM iter: 36019
+i=115 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=116 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=116 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=116 d=0 k=0 Bad R2: 0.999929637731257
+i=116 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=116 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=116 d=0 k=0 Good R2: 0.999975878439017
+
+i=116 d=0 k=0 Total EGM iter: 36019
+i=116 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=117 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=117 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=117 d=0 k=0 Bad R2: 0.999929637731257
+i=117 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=117 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=117 d=0 k=0 Good R2: 0.999975878439017
+
+i=117 d=0 k=0 Total EGM iter: 36019
+i=117 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=118 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=118 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=118 d=0 k=0 Bad R2: 0.999929637731257
+i=118 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=118 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=118 d=0 k=0 Good R2: 0.999975878439017
+
+i=118 d=0 k=0 Total EGM iter: 36019
+i=118 d=0 k=0 Total Main loop iter: 52
+
+Migrating buffers to kernel
+Enqueing Task
+Migrating buffers from kernel
+New kernel flush time is: 112.737s.
+Migrating buffers from kernel
+i=119 d=0 k=0 Bad Coeff 0: 0.145957030678966
+i=119 d=0 k=0 Bad Coeff 1: 0.959893458311303
+i=119 d=0 k=0 Bad R2: 0.999929637731257
+i=119 d=0 k=0 Good Coeff 0: 0.155376011442409
+i=119 d=0 k=0 Good Coeff 1: 0.958724758250043
+i=119 d=0 k=0 Good R2: 0.999975878439017
+
+i=119 d=0 k=0 Total EGM iter: 36019
+i=119 d=0 k=0 Total Main loop iter: 52
+
+Total latency of the loop is: 13530.2s.
+Total latency of opnecl initialization is: 0.159452s.
+Total latency of kernel total time is: 13530s.
+Total latency of kernel init time is: 0.074733s.
+Total latency of kernel h2d is: 0.0199838s.
+Total latency of kernel task is: 0.00572966s.
+Total latency of kernel d2h is: 0.00721218s.
+Total latency of kernel flush time is: 13528.4s.
+Total latency of writing results is: 1.52328s.
+---------------------------------------------------------------
+Average latency of kernel execution per loop iteration is: 4.77472e-05s.
+Average latency of kernel flush per loop iteration is: 112.737s.
+
+Writing total kernel execution time to file

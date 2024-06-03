@@ -1,0 +1,213 @@
+Individual 1, 1.57332181930542 seconds
+Aggregate 1, 1.127185583114624 seconds
+---Iteration 1, dif_B = 0.6744153177634875
+ 
+Individual 2, 0.7792398929595947 seconds
+Aggregate 2, 0.9229118824005127 seconds
+---Iteration 2, dif_B = 0.020979347809940724
+ 
+Individual 3, 0.5784025192260742 seconds
+Aggregate 3, 0.9214162826538086 seconds
+---Iteration 3, dif_B = 0.004958515264602712
+ 
+Individual 4, 0.6852812767028809 seconds
+Aggregate 4, 0.9272394180297852 seconds
+---Iteration 4, dif_B = 0.007922488284157606
+ 
+Individual 5, 0.6035773754119873 seconds
+Aggregate 5, 0.9340863227844238 seconds
+---Iteration 5, dif_B = 0.011633938597913805
+ 
+Individual 6, 0.607471227645874 seconds
+Aggregate 6, 0.9315071105957031 seconds
+---Iteration 6, dif_B = 0.012500436635709107
+ 
+Individual 7, 0.599031925201416 seconds
+Aggregate 7, 0.9357500076293945 seconds
+---Iteration 7, dif_B = 0.011093470567932036
+ 
+Individual 8, 0.5838372707366943 seconds
+Aggregate 8, 0.9325411319732666 seconds
+---Iteration 8, dif_B = 0.009197936907078543
+ 
+Individual 9, 0.5646750926971436 seconds
+Aggregate 9, 0.9332733154296875 seconds
+---Iteration 9, dif_B = 0.007159728470297192
+ 
+Individual 10, 0.5478537082672119 seconds
+Aggregate 10, 0.9299094676971436 seconds
+---Iteration 10, dif_B = 0.005477846365170259
+ 
+Individual 11, 0.5657498836517334 seconds
+Aggregate 11, 1.0081284046173096 seconds
+---Iteration 11, dif_B = 0.004078711747945813
+ 
+Individual 12, 0.5420022010803223 seconds
+Aggregate 12, 0.9749970436096191 seconds
+---Iteration 12, dif_B = 0.0029630895163171513
+ 
+Individual 13, 0.4762265682220459 seconds
+Aggregate 13, 0.9330794811248779 seconds
+---Iteration 13, dif_B = 0.0021817550556878867
+ 
+Individual 14, 0.4578225612640381 seconds
+Aggregate 14, 0.9315681457519531 seconds
+---Iteration 14, dif_B = 0.001591806192600021
+ 
+Individual 15, 0.434246301651001 seconds
+Aggregate 15, 0.9345002174377441 seconds
+---Iteration 15, dif_B = 0.0011594246518223466
+ 
+Individual 16, 0.4189434051513672 seconds
+Aggregate 16, 0.9327793121337891 seconds
+---Iteration 16, dif_B = 0.0008393395909691005
+ 
+Individual 17, 0.4006173610687256 seconds
+Aggregate 17, 0.9314124584197998 seconds
+---Iteration 17, dif_B = 0.0006129784713807672
+ 
+Individual 18, 0.37892699241638184 seconds
+Aggregate 18, 0.9302167892456055 seconds
+---Iteration 18, dif_B = 0.00044002660668834425
+ 
+Individual 19, 0.3533360958099365 seconds
+Aggregate 19, 0.9361085891723633 seconds
+---Iteration 19, dif_B = 0.0003254529173684418
+ 
+Individual 20, 0.32503390312194824 seconds
+Aggregate 20, 0.9340155124664307 seconds
+---Iteration 20, dif_B = 0.0002174312829973989
+ 
+Individual 21, 0.28095555305480957 seconds
+Aggregate 21, 0.9314696788787842 seconds
+---Iteration 21, dif_B = 0.00013799245752922794
+ 
+Individual 22, 0.25211548805236816 seconds
+Aggregate 22, 0.9291057586669922 seconds
+---Iteration 22, dif_B = 0.00010971993553517876
+ 
+Individual 23, 0.2875704765319824 seconds
+Aggregate 23, 0.9325821399688721 seconds
+---Iteration 23, dif_B = 9.932948587577704e-05
+ 
+Individual 24, 0.3113367557525635 seconds
+Aggregate 24, 0.9322149753570557 seconds
+---Iteration 24, dif_B = 9.34505867809037e-05
+ 
+Individual 25, 0.3105456829071045 seconds
+Aggregate 25, 0.9330501556396484 seconds
+---Iteration 25, dif_B = 8.457899058732709e-05
+ 
+Individual 26, 0.3020329475402832 seconds
+Aggregate 26, 0.9313616752624512 seconds
+---Iteration 26, dif_B = 7.211875063976863e-05
+ 
+Individual 27, 0.28519678115844727 seconds
+Aggregate 27, 0.935150146484375 seconds
+---Iteration 27, dif_B = 5.925061309569315e-05
+ 
+Individual 28, 0.26143455505371094 seconds
+Aggregate 28, 0.93074631690979 seconds
+---Iteration 28, dif_B = 4.4661093444350075e-05
+ 
+Individual 29, 0.23238229751586914 seconds
+Aggregate 29, 0.9356091022491455 seconds
+---Iteration 29, dif_B = 3.34654207321903e-05
+ 
+Individual 30, 0.20236420631408691 seconds
+Aggregate 30, 0.9317219257354736 seconds
+---Iteration 30, dif_B = 2.4257041039947304e-05
+ 
+Individual 31, 0.1722126007080078 seconds
+Aggregate 31, 0.9346785545349121 seconds
+---Iteration 31, dif_B = 1.714883887871805e-05
+ 
+Individual 32, 0.1460094451904297 seconds
+Aggregate 32, 0.9330272674560547 seconds
+---Iteration 32, dif_B = 1.1962729849709853e-05
+ 
+Individual 33, 0.12224078178405762 seconds
+Aggregate 33, 0.9311089515686035 seconds
+---Iteration 33, dif_B = 8.284155444074927e-06
+ 
+Individual 34, 0.1003267765045166 seconds
+Aggregate 34, 0.949601411819458 seconds
+---Iteration 34, dif_B = 5.71168569823868e-06
+ 
+Individual 35, 0.08741497993469238 seconds
+Aggregate 35, 1.0049588680267334 seconds
+---Iteration 35, dif_B = 3.927756821327629e-06
+ 
+Individual 36, 0.06764960289001465 seconds
+Aggregate 36, 1.0031700134277344 seconds
+---Iteration 36, dif_B = 2.694602966594881e-06
+ 
+Individual 37, 0.04901266098022461 seconds
+Aggregate 37, 0.9557244777679443 seconds
+---Iteration 37, dif_B = 1.8427803441927415e-06
+ 
+Individual 38, 0.03350114822387695 seconds
+Aggregate 38, 0.9301085472106934 seconds
+---Iteration 38, dif_B = 1.2625348539317992e-06
+ 
+Individual 39, 0.027539491653442383 seconds
+Aggregate 39, 0.9310061931610107 seconds
+---Iteration 39, dif_B = 8.743205280129897e-07
+ 
+Individual 40, 0.022756099700927734 seconds
+Aggregate 40, 0.9313564300537109 seconds
+---Iteration 40, dif_B = 6.083280897409969e-07
+ 
+Individual 41, 0.01919722557067871 seconds
+Aggregate 41, 0.9305391311645508 seconds
+---Iteration 41, dif_B = 4.2541634556970254e-07
+ 
+Individual 42, 0.01646137237548828 seconds
+Aggregate 42, 0.9303467273712158 seconds
+---Iteration 42, dif_B = 2.9902649809896955e-07
+ 
+Individual 43, 0.01333761215209961 seconds
+Aggregate 43, 0.9295318126678467 seconds
+---Iteration 43, dif_B = 2.1025110950133304e-07
+ 
+Individual 44, 0.010809183120727539 seconds
+Aggregate 44, 0.931333065032959 seconds
+---Iteration 44, dif_B = 1.483108945281696e-07
+ 
+Individual 45, 0.008512258529663086 seconds
+Aggregate 45, 0.9303300380706787 seconds
+---Iteration 45, dif_B = 1.0468310478121457e-07
+ 
+Individual 46, 0.006961345672607422 seconds
+Aggregate 46, 0.9365439414978027 seconds
+---Iteration 46, dif_B = 7.42115651171324e-08
+ 
+Individual 47, 0.005349159240722656 seconds
+Aggregate 47, 0.927156925201416 seconds
+---Iteration 47, dif_B = 5.267957782755364e-08
+ 
+Individual 48, 0.004152536392211914 seconds
+Aggregate 48, 0.9327294826507568 seconds
+---Iteration 48, dif_B = 3.749198523003585e-08
+ 
+Individual 49, 0.003500223159790039 seconds
+Aggregate 49, 0.9294042587280273 seconds
+---Iteration 49, dif_B = 2.6815884962658648e-08
+ 
+Individual 50, 0.0026311874389648438 seconds
+Aggregate 50, 0.9321134090423584 seconds
+---Iteration 50, dif_B = 1.9207176578623447e-08
+ 
+Individual 51, 0.0022726058959960938 seconds
+Aggregate 51, 0.9324748516082764 seconds
+---Iteration 51, dif_B = 1.3873296207627475e-08
+ 
+Individual 52, 0.0018541812896728516 seconds
+Aggregate 52, 0.9314565658569336 seconds
+---Iteration 52, dif_B = 1.0074471415892619e-08
+ 
+Individual 53, 0.001041412353515625 seconds
+Aggregate 53, 0.9339015483856201 seconds
+---Iteration 53, dif_B = 7.168118941727524e-09
+ 
+Total Iterations = 53, Total Time = 65.26222729682922

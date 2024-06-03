@@ -1,0 +1,1 @@
+Calibrated Parameters from Maliar, Maliar, Valli (2010).

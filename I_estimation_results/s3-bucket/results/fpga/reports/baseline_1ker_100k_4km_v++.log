@@ -1,0 +1,88 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/centos/code/fpga/reports/runOnfpga
+	Log files: /home/centos/code/fpga/logs/runOnfpga
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/centos/code/fpga/build/runOnfpga.xo.compile_summary, at Thu May  2 16:28:29 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu May  2 16:28:29 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/centos/code/fpga/reports/runOnfpga/v++_compile_runOnfpga_guidance.html', at Thu May  2 16:28:30 2024
+INFO: [v++ 60-895]   Target platform: /home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_3/xilinx_aws-vu9p-f1_shell-v04261818_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_3/hw/xilinx_aws-vu9p-f1_shell-v04261818_201920_3.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2021.2
+INFO: [v++ 60-1302] Platform 'xilinx_aws-vu9p-f1_shell-v04261818_201920_3.xpfm' has been explicitly enabled for this release with an extended warranty.
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_aws-vu9p-f1_shell-v04261818_201920_3
+INFO: [v++ 60-242] Creating kernel: 'runOnfpga'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: runOnfpga Log file: /home/centos/code/_x/runOnfpga/runOnfpga/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'main_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 73, loop 'main_1'
+INFO: [v++ 204-61] Pipelining loop 'main_2_2'.
+WARNING: [v++ 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_3_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_4_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_5_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_6_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'runOnfpga_Pipeline_main_2_2' (loop 'main_2_2'): Unable to schedule bus request operation ('gmem0_load_9_req', /home/centos/code/fpga/hw.cpp:158) on port 'gmem0' (/home/centos/code/fpga/hw.cpp:158) due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 81, loop 'main_2_2'
+INFO: [v++ 204-61] Pipelining loop 'init_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'init_1'
+INFO: [v++ 204-61] Pipelining loop 'init_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'init_2'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'alm_1_alm_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 74, loop 'alm_1_alm_2'
+INFO: [v++ 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 79, function 'pow_generic<double>'
+INFO: [v++ 204-61] Pipelining loop 'ihp_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 78, loop 'ihp_4'
+INFO: [v++ 204-61] Pipelining loop 'ihp_5'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 14, loop 'ihp_5'
+INFO: [v++ 204-61] Pipelining loop 'ast_2_ast_3'.
+WARNING: [v++ 200-885] The II Violation in module 'hw_sim_ast_Pipeline_ast_2_ast_3' (loop 'ast_2_ast_3'): Unable to schedule 'load' operation ('st_kprimes_load_4', /home/centos/code/fpga/hw.cpp:684) on array 'st_kprimes' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'st_kprimes'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'hw_sim_ast_Pipeline_ast_2_ast_3' (loop 'ast_2_ast_3'): Unable to schedule 'load' operation ('st_kprimes_load_6', /home/centos/code/fpga/hw.cpp:686) on array 'st_kprimes' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'st_kprimes'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'hw_sim_ast_Pipeline_ast_2_ast_3' (loop 'ast_2_ast_3'): Unable to schedule 'load' operation ('st_kprimes_load_8', /home/centos/code/fpga/hw.cpp:688) on array 'st_kprimes' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'st_kprimes'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 52, loop 'ast_2_ast_3'
+INFO: [v++ 204-61] Pipelining loop 'ast_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 85, loop 'ast_4'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_227_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_227_2'
+INFO: [v++ 204-61] Pipelining loop 'main_5'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'main_5'
+INFO: [v++ 204-61] Pipelining loop 'main_7'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'main_7'
+INFO: [v++ 204-61] Pipelining loop 'main_10'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'main_10'
+INFO: [v++ 204-61] Pipelining loop 'main_11'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'main_11'
+INFO: [v++ 204-61] Pipelining loop 'main_12'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 142, Depth = 142, loop 'main_12'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 309.91 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/centos/code/fpga/reports/runOnfpga/system_estimate_runOnfpga.xtxt
+INFO: [v++ 60-586] Created fpga/build/runOnfpga.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/centos/code/fpga/build/runOnfpga.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 34s
