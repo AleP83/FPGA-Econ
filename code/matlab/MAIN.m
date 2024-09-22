@@ -90,8 +90,8 @@ kss=((1/beta-(1-delta))/alpha)^(1/(alpha-1)); % steady-state capital in a
 
 [idshock,agshock]  = SHOCKS(prob,T,N,ur_b);
 
-%dlmwrite('~/Dropbox/Projects/Villaverde/repositories/fpga-ks/shocks/idshock.txt',idshock,'delimiter','\t');
-%dlmwrite('~/Dropbox/Projects/Villaverde/repositories/fpga-ks/shocks/agshock.txt',agshock,'delimiter','\t');
+%dlmwrite('../common/shocks/idshock.txt',idshock,'delimiter','\t');
+%dlmwrite('../common/shocks/agshock.txt',agshock,'delimiter','\t');
 %__________________________________________________________________________
 %
 % Grids

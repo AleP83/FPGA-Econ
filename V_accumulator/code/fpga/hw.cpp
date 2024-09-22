@@ -6,8 +6,10 @@ extern "C"
 	 * Copy objects from Global to Local Memory (BRAM/URAM)
 	 */
 	void hw_top_init(real *k_in, fixed_t st_k[J]){
+		#pragma HLS pipeline
 		init_1:
 		for (int i = 0; i < J; ++i){
+			#pragma HLS pipeline
 			st_k[i] = (fixed_t) k_in[i];
 		}
 		return;

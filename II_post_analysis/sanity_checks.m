@@ -2,8 +2,6 @@
 clear
 clc
 close all
-%addpath(genpath('~/Library/CloudStorage/Dropbox/Projects/AWS-FPGA/RERQE-Matlab/replication/II_post_analysis'));
-%addpath(genpath('../I_estimation_results/'));
 addpath('../IV_paper/results/');
 addpath(genpath('../I_estimation_results/'));
 addpath('./SanityChecks/');
