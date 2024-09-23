@@ -784,12 +784,27 @@ for idesign=1:length(designlist)
     clearvars filename fileID ST tot_economies_fpga
     table_cell(2,col)={round(speedup8(idesign),2)};col=col+1;
 end
+table_cell_speedup=table_cell;
+% Resources
+table_mat=round([Resources_.baselineBRAM,Resources_.pipelinenBRAM,Resources_.withindataparallelBRAM,Resources_.acrossdataparallelBRAM;...
+                            Resources_.baselineDSP,Resources_.pipelineDSP,Resources_.withindataparallelDSP,Resources_.acrossdataparallelDSP;...
+                            Resources_.baselineRegisters,Resources_.pipelineRegisters,Resources_.withindataparallelRegisters,Resources_.acrossdataparallelRegisters;...
+                            Resources_.baselineLUTs,Resources_.pipelineLUTs,Resources_.withindataparallelLUTs,Resources_.acrossdataparallelLUTs;...
+                            Resources_.baselineURAM,Resources_.pipelineURAM,Resources_.withindataparallelURAM,Resources_.acrossdataparallelURAM;],2);
+table_cell=cell(size(table_mat, 1) + 2, size(table_mat, 2) + 1);
+table_cell(1, 2:end)={'Baseline','Pipelining','Within-data','Across-Econ'};
+table_cell(2,1)={'Speedup (x)'};
+table_cell(3,1)={'BRAM (%)'};
+table_cell(4,1)={'DSP (%)'};
+table_cell(5,1)={'Registers (%)'};
+table_cell(6,1)={'LUT (%)'};
+table_cell(7,1)={'URAM (%)'};
+table_cell(2, 2:end) = table_cell_speedup(2,:);
+table_cell(3:end, 2:end) = num2cell(table_mat);
 tabella='table5';save([TABLEFOLDER,tabella,'/table.mat'], 'table_cell');eval(strcat(tabella,'=table_cell;'));
+clearvars table_cell tabella cputime5 fpgatime5 designlist speedup8 table_mat table_cell_speedup
 
-clearvars table_cell tabella cputime5 fpgatime5 designlist speedup8
-
-
-%% Accuracy: Tables 6 - Panel A: Coefficients
+%% Accuracy: Table A6 - Panel A: Coefficients
 % Coefficients CPU: Floating point precision
 filename = strcat(INPUTFOLDER,'coefficients/','coeffs_cpu_cores1_i0_of_1200_nKM4_nk100.txt');
 fileID = fopen(filename,'r');
@@ -867,7 +882,7 @@ ST = fclose(fileID);assert(ST==0)
 clearvars filename fileID ST
 clearvars coeffs_float coeffs_fixed
 
-%% Accuracy: Tables 6 - Panel B: Policy Functions
+%% Accuracy: Table A6 - Panel B: Policy Functions
 % Policy Functions k', CPU
 filename = strcat(INPUTFOLDER,'kprime/','kpo_cpu_cores1_i0_of_1200_nKM4_nk100.txt');
 fileID = fopen(filename,'r');
@@ -905,7 +920,7 @@ ST = fclose(fileID);assert(ST==0)
 clearvars filename fileID ST
 clearvars mean_rel_diff max_rel_diff
 
-%% Accuracy: Tables 6 - Panel C: Distributions
+%% Accuracy: Table A6 - Panel C: Distributions
 % Individual capital holding distribution in the last period, CPU
 filename = strcat(INPUTFOLDER,'kcross/','kcross_cpu_cores1_i0_of_1200_nKM4_nk100.txt');
 fileID = fopen(filename,'r');
@@ -1025,7 +1040,7 @@ clearvars float_mean float_std float_Q1 float_Q2 float_Q3
 clearvars fixed_mean fixed_std fixed_Q1 fixed_Q2 fixed_Q3
 clearvars rel_diff
 
-%% Accuracy: Tables 6 - Panel D: Euler Equation Errors
+%% Accuracy: Table A6 - Panel D: Euler Equation Errors
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % Euler Equation Errors
@@ -1093,8 +1108,31 @@ diff = max([table_cell{2,5},table_cell{3,5},table_cell{4,5},table_cell{5,5}],[],
 assert(diff<=1e-6)
 clearvars table_cell diff
 
+%% Table A3
+table_mat=round([time(2,1),time_1ker(2,1,1),time_1ker(2,1,2),time_1ker(2,1,3),time_1ker(2,2,1),time_1ker(2,2,2),time_1ker(2,2,3);...
+               cost(2,1),cost_1ker(2,1,1),cost_1ker(2,1,2),cost_1ker(2,1,3),cost_1ker(2,2,1),cost_1ker(2,2,2),cost_1ker(2,2,3);...
+               energy(2,1),energy_1ker(2,1,1),energy_1ker(2,1,2),energy_1ker(2,1,3),energy_1ker(2,2,1),energy_1ker(2,2,2),energy_1ker(2,2,3);...
+    Resources_.acrossdataparallelBRAM,Resources_.withindataparallelBRAM,Resources_.bramnKMIkII,Resources_.bramnKMIkIII,Resources_.bramnKMIIkI,Resources_.bramnKMIIkII,Resources_.bramnKMIIkIII;...
+Resources_.acrossdataparallelDSP,Resources_.withindataparallelDSP,Resources_.dspnKMIkII,Resources_.dspnKMIkIII,Resources_.dspnKMIIkI,Resources_.dspnKMIIkII,Resources_.dspnKMIIkIII;...    
+Resources_.acrossdataparallelRegisters,Resources_.withindataparallelRegisters,Resources_.registernKMIkII,Resources_.registernKMIkIII,Resources_.registernKMIIkI,Resources_.registernKMIIkII,Resources_.registernKMIIkIII;...    
+Resources_.acrossdataparallelLUTs,Resources_.withindataparallelLUTs,Resources_.lutnKMIkII,Resources_.lutnKMIkIII,Resources_.lutnKMIIkI,Resources_.lutnKMIIkII,Resources_.lutnKMIIkIII;...    
+Resources_.acrossdataparallelURAM,Resources_.withindataparallelURAM,Resources_.uramnKMIkII,Resources_.uramnKMIkIII,Resources_.uramnKMIIkI,Resources_.uramnKMIIkII,Resources_.uramnKMIIkIII;],2);
+table_cell=cell(size(table_mat, 1) + 1, size(table_mat, 2) + 1);
+table_cell(1, 2:end)={'3ker-4-100','1ker-4-100','1ker-4-200','1ker-4-300','1ker-8-100','1ker-8-200','1ker-8-300'};
+table_cell(2,1)={'Time (s)'};
+table_cell(3,1)={'Cost ($)'};
+table_cell(4,1)={'Energy (J)'};
+table_cell(5,1)={'BRAM (%)'};
+table_cell(6,1)={'DSP (%)'};
+table_cell(7,1)={'Registers (%)'};
+table_cell(8,1)={'LUT (%)'};
+table_cell(9,1)={'URAM (%)'};
+table_cell(2:end, 2:end) = num2cell(table_mat);
+tabella='tableA3';save([TABLEFOLDER,tabella,'/table.mat'], 'table_cell', 'table_mat');eval(strcat(tabella,'=table_cell;'));
+clearvars table_mat table_cell tabella
+
 %% Save all Tables
-save([TABLEFOLDER,'Tables.mat'], 'table2', 'table3', 'table4_panel_A','table4_panel_B', 'tableA6_panel_A', 'tableA6_panel_B', 'tableA6_panel_C', 'tableA6_panel_D', 'tableA4', 'tableA5');
+save([TABLEFOLDER,'Tables.mat'], 'table2', 'table3', 'table4_panel_A','table4_panel_B', 'table5','tableA6_panel_A', 'tableA6_panel_B', 'tableA6_panel_C', 'tableA6_panel_D', 'tableA3','tableA4', 'tableA5');
 
 %% Abstract
 display("Abstract")
