@@ -1,0 +1,871 @@
+\documentclass[12pt,american]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage{xcolor}
+\usepackage{booktabs,siunitx}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{natbib}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{makecell}
+\usepackage{setspace}
+\usepackage{xspace}[2006/05/08]
+\usepackage{subcaption}
+\usepackage{multicol} 
+\usepackage{paralist} 
+\captionsetup[subtable]{labelformat=simple, labelsep=colon}
+\renewcommand{\thesubtable}{Panel~\Alph{subtable}}  
+\sisetup{input-decimal-markers = {.}} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CODE
+\usepackage{listings}
+\usepackage{xparse} 
+%%%%%% FORMATTING CODE OUTPUT
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
+\definecolor{userbackground}{RGB}{252,255,233}
+\lstset{language=C,
+        keywordstyle={\bfseries \color{blue}},
+        backgroundcolor  = \color{codebackground},
+        keepspaces       = true,
+        basicstyle       = {\ttfamily\footnotesize},
+        numbers=left,
+        numberstyle      = \scriptsize\color{black},
+        numbersep        = 5pt,
+        frame=tb, 
+        breaklines=true
+}
+\newcommand{\commandtex}[1]{\textcolor{blue}{#1}\@\xspace}
+% Define VHDL style
+\lstdefinestyle{vhdlStyle}{
+  language=VHDL,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red},
+  breaklines=true,
+  showstringspaces=false,
+  morekeywords={library, use, all, entity, is, port, in, out, end, architecture, of, begin, and, or, if, then, else, elsif, process, signal, assign}
+}
+\usepackage{threeparttable}
+\usepackage{multibib}
+\newcites{app}{Appendix References}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CEIL FUNCTION
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor=blue,
+    citecolor=red,
+    urlcolor=cyan
+    }
+\geometry{verbose,left=5.4em, right=5.4em, top=5.4em, bottom=5.4em}
+\renewcommand\Authands{ and }
+\usepackage{atbegshi}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           USER-DEFINED COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% NOTATION
+\newcommand{\kprime}{k^{\prime}}
+\newcommand{\kdis}{\mathbf{\Gamma}}
+\newcommand{\kupd}{\widehat{k}'_{i+1}}
+\newcommand{\kgss}{\kprime_{i}}
+\newcommand{\tollk}{\varepsilon_{k}}
+\newcommand{\kopt}{k^{\prime}}
+\newcommand{\Aset}{\mathbf{A}}
+\newcommand{\kset}{\mathbf{K}}
+\newcommand{\idset}{\{0,1\}_{\epsilon}}
+\newcommand{\kdismom}{m}
+\newcommand{\kdismomset}{\mathbf{M}}
+\newcommand{\lbar}{\bar{l}}
+\newcommand{\Leff}{\lbar L}
+\newcommand{\state}{k,\epsilon,m,A}
+\newcommand{\stateset}{\kset \times \idset \times \kdismomset \times \Aset}
+\newcommand{\KGRID}{\bar{K}}
+\newcommand{\MGRID}{\bar{M}}
+\newcommand{\mprime}{m^{\prime}}
+\newcommand{\bhat}{\hat{b_i}}
+\newcommand{\Naccsize}{J}
+%%%%%%%%%%%%%%%%%%%%%%% RESULTS FOLDERS AND NAMING
+\newcommand{\resultsfolder}{./results}
+\newcommand{\graphicsfolder}{./graphics}
+\newcommand{\devfpgaI}{fpgaI}
+\newcommand{\devfpgaII}{fpgaII}
+\newcommand{\devfpgaIII}{fpgaIII}
+\newcommand{\devcpu}{cpu-cores}
+\newcommand{\nKMIkI}{nKM4-nk100}
+\newcommand{\nKMIkII}{nKM4-nk200}
+\newcommand{\nKMIkIII}{nKM4-nk300}
+\newcommand{\nKMIIkI}{nKM8-nk100}
+\newcommand{\nKMIIkII}{nKM8-nk200}
+\newcommand{\nKMIIkIII}{nKM8-nk300}
+\newcommand{\knlI}{knl-1}
+\newcommand{\knlII}{knl-3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instances
+\newcommand{\cpuI}{m5n.large\@\xspace}
+\newcommand{\cpucoreI}{1}   
+\newcommand{\cpucostI}{0.119}  
+\newcommand{\cpuII}{m5n.4xlarge\@\xspace}
+\newcommand{\cpucoreII}{8}  
+\newcommand{\cpucostII}{0.952}  
+\newcommand{\cpuIII}{m5n.24xlarge\@\xspace}
+\newcommand{\cpucoreIII}{48} 
+\newcommand{\cpucostIII}{5.712}  
+\newcommand{\awsinstI}{\textcolor{magenta}{z1d.2xlarge}\@\xspace}
+\newcommand{\awsinstcostI}{\textcolor{magenta}{0.744}\@\xspace}
+\newcommand{\awsinstfI}{f1.2xlarge\@\xspace}
+\newcommand{\awsinstcostfI}{\textcolor{magenta}{1.65}\@\xspace}
+\newcommand{\awsinstfII}{f1.4xlarge\@\xspace}
+\newcommand{\awsinstcostfII}{\textcolor{magenta}{3.30}\@\xspace}
+\newcommand{\awsinstfIII}{f1.16xlarge\@\xspace}
+\newcommand{\awsinstcostfIII}{\textcolor{magenta}{13.20}\@\xspace}
+
+%%%%%%%%%%%%%%%%% Abstract
+\newcommand{\baselinespeedupFPGAICPUI}{\input{\resultsfolder/cpu-cores1-fpgaI-nKM4-nk100-speedup_rounded.txt}\@\xspace} 
+\newcommand{\cpuItimehoursminutes}{\input{\resultsfolder/cpu-cores1-nKM4-nk100-hours_rounded.txt} hours\@\xspace}     
+\newcommand{\fpgaItimehoursminutes}{\input{\resultsfolder/fpgaI-nKM4-nk100-minutes_rounded.txt} minutes\@\xspace}  
+%%%%%%%%%%%%%%%%% Introduction
+\newcommand{\baselinespeedupFPGAICPUIII}{\input{\resultsfolder/cpu-cores48-fpgaI-nKM4-nk100-speedup.txt}} 
+\newcommand{\baselinespeedupFPGAIIICPUI}{\input{\resultsfolder/cpu-cores1-fpgaIII-nKM4-nk100-speedup_rounded.txt}} 
+\newcommand{\baselinespeedupFPGAIIICPUII}{\input{\resultsfolder/cpu-cores8-fpgaIII-nKM4-nk100-speedup_rounded.txt}} 
+\newcommand{\baselinespeedupFPGAIIICPUIII}{\input{\resultsfolder/cpu-cores48-fpgaIII-nKM4-nk100-speedup_rounded.txt}} 
+\newcommand{\costupperbound}{\input{\resultsfolder/maxcostsavings_rounded.txt}} 
+\newcommand{\energyupperbound}{\input{\resultsfolder/maxenergysavings_rounded.txt}} 
+%%%%%%%%%%%%%%%%% Quantitative Results
+%%%%%%%%%%%%%%%%%%%%% Section: Speedups of FPGA 
+\newcommand{\cpuIItimehoursminutes}{approximately \input{\resultsfolder/cpu-cores8-nKM4-nk100-hours_rounded.txt} hour\@\xspace}     
+% Costs
+\newcommand{\CPUcostonemillioneconomies}{\$\input{\resultsfolder/cpu-cores1-nKM4-nk100-cost-million_economies.txt}}
+\newcommand{\FPGAcostonemillioneconomies}{\$\input{\resultsfolder/fpgaI-nKM4-nk100-cost-million_economies.txt}\@\xspace}
+%%%%%%%%%%%%%%%%%%%%% Section: Robustness
+\newcommand{\THEORETICALspeedupFPGAICPUI}{\input{\resultsfolder/cpu-cores1-fpgaI-nKM4-nk100-speedup-theoretical.txt}} 
+\newcommand{\fpgaIknlIpowerconsumption}{\input{\resultsfolder/carbfoot_fpgaI-knl-1-nKM4-nk100-power.txt}}
+%%%%%%%%%%%%%%%%% Inspecting the Mechanism > Baseline
+\newcommand{\avgfpgaIbasenKMIkItime}{\input{\resultsfolder/fpgaI-base-knl-1-nKM4-nk100-time-avg_rounded.txt}}
+ \newcommand{\avgcpubasenKMIkItime}{\input{\resultsfolder/cpu-cores1-nKM4-nk100-time-avg_rounded.txt}}
+\newcommand{\avgfpgacpusbasespeedup}{\input{\resultsfolder/cpu-cores1-fpgaI-knl-1-base-nKM4-nk100-speedup-word.txt}times slower than}
+%%%%%%%%%%%%%%%%%%%%% Section: Inspecting the Mechanism > Within-Data Parallelism 
+\newcommand{\fpgaIdatparknlISimulationSteptime}{\input{\resultsfolder/fpgaI-knl-1-nKM4-nk100-sim-time-tot.txt}\hspace{-0.12cm}ms}
+\newcommand{\fpgaIdatparknlIIAPSteptime}{\input{\resultsfolder/fpgaI-knl-1-nKM4-nk100-ihp-time-tot.txt}\hspace{-0.12cm}ms}
+\newcommand{\fpgaIdatparknlISimulationStepspeedup}{\input{\resultsfolder/cpu-cores1-fpgaI-knl-1-nKM4-nk100-speedup-sim.txt}\hspace{-0.12cm}x}
+\newcommand{\fpgaIdatparknlIIAPStepspeedup}{\input{\resultsfolder/cpu-cores1-fpgaI-knl-1-nKM4-nk100-speedup-ihp.txt}\hspace{-0.12cm}x}
+ %%%%%%%%%%%%%%%%% Carbon Footprint
+ \newcommand{\fpgaIpowerconsumption}{\input{\resultsfolder/carbfoot_fpgaI-nKM4-nk100-power.txt}}
+\newcommand{\fpgaIpowerconsumptionperhour}{\input{\resultsfolder/carbfoot_fpgaI-nKM4-nk100-power_kWh.txt}}
+\newcommand{\fpgaICOIIpoundsperhour}{\input{\resultsfolder/carbfoot_lbsC02_fpgahour.txt}}
+\newcommand{\SummitonFPGAtothours}{\input{\resultsfolder/carbfoot_Summit_yearlyhour_on_fpga.txt}}
+\newcommand{\SummitonFPGAtotlbsCOII}{\input{\resultsfolder/carbfoot_lbsC02_year.txt}}
+\newcommand{\SummitonFPGAtotmTonCOII}{\input{\resultsfolder/carbfoot_metrictonsC02_year.txt}}
+\newcommand{\fpgacars}{\input{\resultsfolder/carbfoot_cars_fpga_word.txt}}
+\newcommand{\fpgacarsnumber}{\input{\resultsfolder/carbfoot_cars_fpga.txt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           AUTOMATIC UPDATE TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% TABLE 2: Benchmarking the C code
+\newcommand{\cpulineartime}{\input{\resultsfolder/\devcpu\cpucoreI-linear-kernel-time.txt}}
+\newcommand{\cpubinarytime}{\input{\resultsfolder/\devcpu\cpucoreI-binary-kernel-time.txt}}
+\newcommand{\cpujumpsearchtime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-kernel-time.txt}}
+\newcommand{\cpubinaryspeedup}{\input{\resultsfolder/\devcpu\cpucoreI-binary-speedup.txt}}
+\newcommand{\cpujumpsearchspeedup}{\input{\resultsfolder/\devcpu\cpucoreI-jumpsearch-speedup.txt}}
+%%%%%%%%%%%%%%%%%%%% TABLE A4: Three-Kernel Comparison: Time, Cost, Energy
+\newcommand{\cpuItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-time-tot.txt}}
+\newcommand{\cpuIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-init-time.txt}}
+\newcommand{\cpuIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-write-time.txt}}
+\newcommand{\cpuItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-kernel-time.txt}}
+\newcommand{\cpuIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-cost.txt}}
+\newcommand{\cpuIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-energy.txt}}
+\newcommand{\cpuIItimetot}{\input{\resultsfolder/\devcpu\cpucoreII-\nKMIkI-time-tot.txt}}
+\newcommand{\cpuIIinittime}{\input{\resultsfolder/\devcpu\cpucoreII-\nKMIkI-init-time.txt}}
+\newcommand{\cpuIIwritetime}{\input{\resultsfolder/\devcpu\cpucoreII-\nKMIkI-write-time.txt}}
+\newcommand{\cpuIItime}{\input{\resultsfolder/\devcpu\cpucoreII-\nKMIkI-kernel-time.txt}}
+\newcommand{\cpuIIcost}{\input{\resultsfolder/\devcpu\cpucoreII-\nKMIkI-cost.txt}}
+\newcommand{\cpuIIenergy}{\input{\resultsfolder/\devcpu\cpucoreII-\nKMIkI-energy.txt}}
+\newcommand{\cpuIIItimetot}{\input{\resultsfolder/\devcpu\cpucoreIII-\nKMIkI-time-tot.txt}}
+\newcommand{\cpuIIIinittime}{\input{\resultsfolder/\devcpu\cpucoreIII-\nKMIkI-init-time.txt}}
+\newcommand{\cpuIIIwritetime}{\input{\resultsfolder/\devcpu\cpucoreIII-\nKMIkI-write-time.txt}}
+\newcommand{\cpuIIItime}{\input{\resultsfolder/\devcpu\cpucoreIII-\nKMIkI-kernel-time.txt}}
+\newcommand{\cpuIIIcost}{\input{\resultsfolder/\devcpu\cpucoreIII-\nKMIkI-cost.txt}}
+\newcommand{\cpuIIIenergy}{\input{\resultsfolder/\devcpu\cpucoreIII-\nKMIkI-energy.txt}}
+\newcommand{\fpgaItimetot}{\input{\resultsfolder/\devfpgaI-\nKMIkI-time-tot.txt}}
+\newcommand{\fpgaIinittime}{\input{\resultsfolder/\devfpgaI-\nKMIkI-init-time.txt}}
+\newcommand{\fpgaIwritetime}{\input{\resultsfolder/\devfpgaI-\nKMIkI-write-time.txt}}
+\newcommand{\fpgaItime}{\input{\resultsfolder/\devfpgaI-\nKMIkI-kernel-time.txt}}
+\newcommand{\fpgaIcost}{\input{\resultsfolder/\devfpgaI-\nKMIkI-cost.txt}}
+\newcommand{\fpgaIenergy}{\input{\resultsfolder/\devfpgaI-\nKMIkI-energy.txt}}
+\newcommand{\fpgaIItimetot}{\input{\resultsfolder/\devfpgaII-\nKMIkI-time-tot.txt}}
+\newcommand{\fpgaIIinittime}{\input{\resultsfolder/\devfpgaII-\nKMIkI-init-time.txt}}
+\newcommand{\fpgaIIwritetime}{\input{\resultsfolder/\devfpgaII-\nKMIkI-write-time.txt}}
+\newcommand{\fpgaIItime}{\input{\resultsfolder/\devfpgaII-\nKMIkI-kernel-time.txt}}
+\newcommand{\fpgaIIcost}{\input{\resultsfolder/\devfpgaII-\nKMIkI-cost.txt}}
+\newcommand{\fpgaIIenergy}{\input{\resultsfolder/\devfpgaII-\nKMIkI-energy.txt}}
+\newcommand{\fpgaIIItimetot}{\input{\resultsfolder/\devfpgaIII-\nKMIkI-time-tot.txt}}
+\newcommand{\fpgaIIIinittime}{\input{\resultsfolder/\devfpgaIII-\nKMIkI-init-time.txt}}
+\newcommand{\fpgaIIIwritetime}{\input{\resultsfolder/\devfpgaIII-\nKMIkI-write-time.txt}}
+\newcommand{\fpgaIIItime}{\input{\resultsfolder/\devfpgaIII-\nKMIkI-kernel-time.txt}}
+\newcommand{\fpgaIIIcost}{\input{\resultsfolder/\devfpgaIII-\nKMIkI-cost.txt}}
+\newcommand{\fpgaIIIenergy}{\input{\resultsfolder/\devfpgaIII-\nKMIkI-energy.txt}}
+% %%%%%%%%%%%%%%%%%%%% TABLE 3 - Panel A
+% Speedup
+\newcommand{\fpgaspeedICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaI-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaI-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaII-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaII-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaII-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIIICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaIII-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIIICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaIII-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIIICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaIII-\nKMIkI-speedup.txt}}
+% Cost savings
+\newcommand{\fpgacostICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaI-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaI-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostIICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaII-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostIICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaII-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostIICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaII-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostIIICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaIII-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostIIICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaIII-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostIIICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaIII-\nKMIkI-costsavings.txt}}
+% Energy savings
+\newcommand{\fpgaenergyICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaI-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaI-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyIICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaII-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyIICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaII-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyIICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaII-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyIIICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaIII-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyIIICPUII}{\input{\resultsfolder/\devcpu\cpucoreII-\devfpgaIII-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergyIIICPUIII}{\input{\resultsfolder/\devcpu\cpucoreIII-\devfpgaIII-\nKMIkI-energysavings.txt}}
+% %%%%%%%%%%%%%%%%%%%% TABLE 4 - Panel A: Single-Kernel Performance 100-4: Time, Cost, Energy
+\newcommand{\fpgaIknlItimeavg}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkI-time-avg.txt}}
+\newcommand{\cpuItimeavg}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-time-avg.txt}}
+\newcommand{\fpgaspeedIknlICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkI-speedup.txt}}
+\newcommand{\fpgatimeIknlInKMIkI}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkI-kernel-time.txt}}
+\newcommand{\fpgacostIknlICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgaenergyIknlICPUI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkI-energysavings.txt}}
+% %%%%%%%%%%%%%%%%%%%% TABLE 4 - Panel B: Single-Kernel Performance (Time) by grid size
+\newcommand{\fpgaspeedIknlICPUInKMIkI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaspeedIknlICPUInKMIkII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkII-speedup.txt}}
+\newcommand{\fpgaspeedIknlICPUInKMIkIII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkIII-speedup.txt}}
+\newcommand{\fpgaspeedIknlICPUInKMIIkI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkI-speedup.txt}}
+\newcommand{\fpgaspeedIknlICPUInKMIIkII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkII-speedup.txt}}
+\newcommand{\fpgaspeedIknlICPUInKMIIkIII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkIII-speedup.txt}}
+\newcommand{\fpgacostsavingsIknlICPUInKMIkI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkI-costsavings.txt}}
+\newcommand{\fpgacostsavingsIknlICPUInKMIkII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkII-costsavings.txt}}
+\newcommand{\fpgacostsavingsIknlICPUInKMIkIII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkIII-costsavings.txt}}
+\newcommand{\fpgacostsavingsIknlICPUInKMIIkI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkI-costsavings.txt}}
+\newcommand{\fpgacostsavingsIknlICPUInKMIIkII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkII-costsavings.txt}}
+\newcommand{\fpgacostsavingsIknlICPUInKMIIkIII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkIII-costsavings.txt}}
+\newcommand{\fpgaenergysavingsIknlICPUInKMIkI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkI-energysavings.txt}}
+\newcommand{\fpgaenergysavingsIknlICPUInKMIkII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkII-energysavings.txt}}
+\newcommand{\fpgaenergysavingsIknlICPUInKMIkIII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIkIII-energysavings.txt}}
+\newcommand{\fpgaenergysavingsIknlICPUInKMIIkI}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkI-energysavings.txt}}
+\newcommand{\fpgaenergysavingsIknlICPUInKMIIkII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkII-energysavings.txt}}
+\newcommand{\fpgaenergysavingsIknlICPUInKMIIkIII}{\input{\resultsfolder/\devcpu\cpucoreI-\devfpgaI-\knlI-\nKMIIkIII-energysavings.txt}}
+% %%%%%%%%%%%%%%%%%%%% TABLE A3: FPGA Designs PErformance and Resource utilization
+\newcommand{\fpgatimeIknlInKMIkII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkII-kernel-time.txt}}
+\newcommand{\fpgatimeIknlInKMIkIII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkIII-kernel-time.txt}}
+\newcommand{\fpgatimeIknlInKMIIkI}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkI-kernel-time.txt}}
+\newcommand{\fpgatimeIknlInKMIIkII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkII-kernel-time.txt}}
+\newcommand{\fpgatimeIknlInKMIIkIII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkIII-kernel-time.txt}}
+\newcommand{\fpgacostIknlInKMIkI}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkI-cost.txt}}
+\newcommand{\fpgacostIknlInKMIkII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkII-cost.txt}}
+\newcommand{\fpgacostIknlInKMIkIII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkIII-cost.txt}}
+\newcommand{\fpgacostIknlInKMIIkI}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkI-cost.txt}}
+\newcommand{\fpgacostIknlInKMIIkII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkII-cost.txt}}
+\newcommand{\fpgacostIknlInKMIIkIII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkIII-cost.txt}}
+\newcommand{\fpgaenergyIknlInKMIkI}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkI-energy.txt}}
+\newcommand{\fpgaenergyIknlInKMIkII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkII-energy.txt}}
+\newcommand{\fpgaenergyIknlInKMIkIII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIkIII-energy.txt}}
+\newcommand{\fpgaenergyIknlInKMIIkI}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkI-energy.txt}}
+\newcommand{\fpgaenergyIknlInKMIIkII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkII-energy.txt}}
+\newcommand{\fpgaenergyIknlInKMIIkIII}{\input{\resultsfolder/\devfpgaI-\knlI-\nKMIIkIII-energy.txt}}
+% %%%%%%%%%%%%%%%%%%%% Table 5 - Acceleration Channels
+\newcommand{\fpgaIbasespeedcpuIbasenKMIkI}{\input{\resultsfolder/cpuI-base-\knlI-\devfpgaI-base-\knlI-\nKMIkI-speedup.txt}}
+\newcommand{\fpgaIpipspeedcpuIbasenKMIkI}{\input{\resultsfolder/cpuI-base-\knlI-\devfpgaI-pip-\knlI-\nKMIkI -speedup.txt}}
+%%%%%%%%%%%%%%%%%%%% TABLE 5 - Acceleration Channels: Three-kernel 100-4 RESOURCES
+\newcommand{\baselineBRAM}{\input{\resultsfolder/resources-baselineBRAM.txt}}
+\newcommand{\baselineDSP}{\input{\resultsfolder/resources-baselineDSP.txt}}
+\newcommand{\baselineRegisters}{\input{\resultsfolder/resources-baselineRegisters.txt}}
+\newcommand{\baselineLUTs}{\input{\resultsfolder/resources-baselineLUTs.txt}}
+\newcommand{\baselineURAM}{\input{\resultsfolder/resources-baselineURAM.txt}}
+\newcommand{\pipelinenBRAM}{\input{\resultsfolder/resources-pipelinenBRAM.txt}}
+\newcommand{\pipelineDSP}{\input{\resultsfolder/resources-pipelineDSP.txt}}
+\newcommand{\pipelineRegisters}{\input{\resultsfolder/resources-pipelineRegisters.txt}}
+\newcommand{\pipelineLUTs}{\input{\resultsfolder/resources-pipelineLUTs.txt}}
+\newcommand{\pipelineURAM}{\input{\resultsfolder/resources-pipelineURAM.txt}}
+\newcommand{\withindataparallelBRAM}{\input{\resultsfolder/resources-withindataparallelBRAM.txt}}
+\newcommand{\withindataparallelDSP}{\input{\resultsfolder/resources-withindataparallelDSP.txt}}
+\newcommand{\withindataparallelRegisters}{\input{\resultsfolder/resources-withindataparallelRegisters.txt}}
+\newcommand{\withindataparallelLUTs}{\input{\resultsfolder/resources-withindataparallelLUTs.txt}}
+\newcommand{\withindataparallelURAM}{\input{\resultsfolder/resources-withindataparallelURAM.txt}}
+\newcommand{\acrossdataparallelBRAM}{\input{\resultsfolder/resources-acrossdataparallelBRAM.txt}}
+\newcommand{\acrossdataparallelDSP}{\input{\resultsfolder/resources-acrossdataparallelDSP.txt}}
+\newcommand{\acrossdataparallelRegisters}{\input{\resultsfolder/resources-acrossdataparallelRegisters.txt}}
+\newcommand{\acrossdataparallelLUTs}{\input{\resultsfolder/resources-acrossdataparallelLUTs.txt}}
+\newcommand{\acrossdataparallelURAM}{\input{\resultsfolder/resources-acrossdataparallelURAM.txt}}
+%%%%%%%%%%%%%%%%%%%% TABLE A3: SINGLE-KERNEL RESOURCES: NKM= 4, Nk in {100,200.300}
+\newcommand{\bramnKMIkI}{\input{\resultsfolder/resources-withindataparallelBRAM.txt}}
+\newcommand{\bramnKMIkII}{\input{\resultsfolder/resources-bramnKMIkII.txt}}
+\newcommand{\bramnKMIkIII}{\input{\resultsfolder/resources-bramnKMIkIII.txt}}
+\newcommand{\dspnKMIkI}{\input{\resultsfolder/resources-withindataparallelDSP.txt}}
+\newcommand{\dspnKMIkII}{\input{\resultsfolder/resources-dspnKMIkII.txt}}
+\newcommand{\dspnKMIkIII}{\input{\resultsfolder/resources-dspnKMIkIII.txt}}
+\newcommand{\registernKMIkI}{\input{\resultsfolder/resources-withindataparallelRegisters.txt}}
+\newcommand{\registernKMIkII}{\input{\resultsfolder/resources-registernKMIkII.txt}}
+\newcommand{\registernKMIkIII}{\input{\resultsfolder/resources-registernKMIkIII.txt}}
+\newcommand{\lutnKMIkI}{\input{\resultsfolder/resources-withindataparallelLUTs.txt}}
+\newcommand{\lutnKMIkII}{\input{\resultsfolder/resources-lutnKMIkII.txt}}
+\newcommand{\lutnKMIkIII}{\input{\resultsfolder/resources-lutnKMIkIII.txt}}
+\newcommand{\uramnKMIkI}{\input{\resultsfolder/resources-withindataparallelURAM.txt}}
+\newcommand{\uramnKMIkII}{\input{\resultsfolder/resources-uramnKMIkII.txt}}
+\newcommand{\uramnKMIkIII}{\input{\resultsfolder/resources-uramnKMIkIII.txt}}
+%%%%%%%%%%%%%%%%%%%%  TABLE A3: SINGLE-KERNEL RESOURCES: NKM= 8, Nk in {100,200.300}
+\newcommand{\bramnKMIIkI}{\input{\resultsfolder/resources-bramnKMIIkI.txt}}
+\newcommand{\bramnKMIIkII}{\input{\resultsfolder/resources-bramnKMIIkII.txt}}
+\newcommand{\bramnKMIIkIII}{\input{\resultsfolder/resources-bramnKMIIkIII.txt}}
+\newcommand{\dspnKMIIkI}{\input{\resultsfolder/resources-dspnKMIIkI.txt}}
+\newcommand{\dspnKMIIkII}{\input{\resultsfolder/resources-dspnKMIIkII.txt}}
+\newcommand{\dspnKMIIkIII}{\input{\resultsfolder/resources-dspnKMIIkIII.txt}}
+\newcommand{\registernKMIIkI}{\input{\resultsfolder/resources-registernKMIIkI.txt}}
+\newcommand{\registernKMIIkII}{\input{\resultsfolder/resources-registernKMIIkII.txt}}
+\newcommand{\registernKMIIkIII}{\input{\resultsfolder/resources-registernKMIIkIII.txt}}
+\newcommand{\lutnKMIIkI}{\input{\resultsfolder/resources-lutnKMIIkI.txt}}
+\newcommand{\lutnKMIIkII}{\input{\resultsfolder/resources-lutnKMIIkII.txt}}
+\newcommand{\lutnKMIIkIII}{\input{\resultsfolder/resources-lutnKMIIkIII.txt}}
+\newcommand{\uramnKMIIkI}{\input{\resultsfolder/resources-uramnKMIIkI.txt}}
+\newcommand{\uramnKMIIkII}{\input{\resultsfolder/resources-uramnKMIIkII.txt}}
+\newcommand{\uramnKMIIkIII}{\input{\resultsfolder/resources-uramnKMIIkIII.txt}}
+% %%%%%%%%%%%%%%%%%%%% Table 6 - Precision Accuracy Analysis - Panel A
+\newcommand{\betaIab}{\input{\resultsfolder/tab_betaIab.txt}}
+\newcommand{\betaIIab}{\input{\resultsfolder/tab_betaIIab.txt}}
+\newcommand{\betaIag}{\input{\resultsfolder/tab_betaIag.txt}}
+\newcommand{\betaIIag}{\input{\resultsfolder/tab_betaIIag.txt}}
+\newcommand{\betaIabFix}{\input{\resultsfolder/tab_betaIabFix.txt}}
+\newcommand{\betaIIabFix}{\input{\resultsfolder/tab_betaIIabFix.txt}}
+\newcommand{\betaIagFix}{\input{\resultsfolder/tab_betaIagFix.txt}}
+\newcommand{\betaIIagFix}{\input{\resultsfolder/tab_betaIIagFix.txt}}
+% %%%%%%%%%%%%%%%%%%%% Table 6 - Precision Accuracy Analysis - Panel B
+\newcommand{\absmeandifferencekprime}{\input{\resultsfolder/tab_mean_rel_diff_kprime.txt}}
+\newcommand{\absmaxdifferencekprime}{\input{\resultsfolder/tab_max_rel_diff_kprime.txt}}
+% %%%%%%%%%%%%%%%%%%%% Table 6 - Precision Accuracy Analysis - Panel C
+\newcommand{\meankcross}{\input{\resultsfolder/tab_meankcross.txt}}
+\newcommand{\qIkcross}{\input{\resultsfolder/tab_qIkcross.txt}}
+\newcommand{\mediankcross}{\input{\resultsfolder/tab_mediankcross.txt}}
+\newcommand{\qIIIkcross}{\input{\resultsfolder/tab_qIIIkcross.txt}}
+\newcommand{\stdkcross}{\input{\resultsfolder/tab_stdkcross.txt}}
+\newcommand{\meankcrossFix}{\input{\resultsfolder/tab_meankcrossFix.txt}}
+\newcommand{\qIkcrossFix}{\input{\resultsfolder/tab_qIkcrossFix.txt}}
+\newcommand{\mediankcrossFix}{\input{\resultsfolder/tab_mediankcrossFix.txt}}
+\newcommand{\qIIIkcrossFix}{\input{\resultsfolder/tab_qIIIkcrossFix.txt}}
+\newcommand{\stdkcrossFix}{\input{\resultsfolder/tab_stdkcrossFix.txt}}
+\newcommand{\absmeandifferencekcross}{\input{\resultsfolder/tab_mean_rel_diff_kcross.txt}}
+\newcommand{\absmaxdifferencekcross}{\input{\resultsfolder/tab_max_rel_diff_kcross.txt}}
+\newcommand{\absmaxdifferencekprimekcross}{\input{\resultsfolder/tab_kcrosskprimemaxdiff.txt}}
+% %%%%%%%%%%%%%%%%%%%% Table 6 - Precision Accuracy Analysis - Panel D
+\newcommand{\EEEmeanfpgaIKMIkI}{\input{\resultsfolder/tab_EEE_FPGA_nKM4_nk100_mean.txt}}
+\newcommand{\EEEmeancpuIKMIkI}{\input{\resultsfolder/tab_EEE_CPU_nKM4_nk100_mean.txt}}
+\newcommand{\EEEmeanrelKMIkI}{\input{\resultsfolder/tab_EEE_relative_nKM4_nk100_mean.txt}}
+\newcommand{\EEEmaxfpgaIKMIkI}{\input{\resultsfolder/tab_EEE_FPGA_nKM4_nk100_max.txt}}
+\newcommand{\EEEmaxcpuIKMIkI}{\input{\resultsfolder/tab_EEE_CPU_nKM4_nk100_max.txt}}
+\newcommand{\EEEmaxrelKMIkI}{\input{\resultsfolder/tab_EEE_relative_nKM4_nk100_max.txt}}
+\newcommand{\EEEmeanfpgaIKMIkIII}{\input{\resultsfolder/tab_EEE_FPGA_nKM4_nk300_mean.txt}}
+\newcommand{\EEEmeancpuIKMIkIII}{\input{\resultsfolder/tab_EEE_CPU_nKM4_nk300_mean.txt}}
+\newcommand{\EEEmeanrelKMIkIII}{\input{\resultsfolder/tab_EEE_relative_nKM4_nk300_mean.txt}}
+\newcommand{\EEEmaxfpgaIKMIkIII}{\input{\resultsfolder/tab_EEE_FPGA_nKM4_nk300_max.txt}}
+\newcommand{\EEEmaxcpuIKMIkIII}{\input{\resultsfolder/tab_EEE_CPU_nKM4_nk300_max.txt}}
+\newcommand{\EEEmaxrelKMIkIII}{\input{\resultsfolder/tab_EEE_relative_nKM4_nk300_max.txt}}
+%%% CPU1-100-4
+\newcommand{\cpuIKMIkItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-time-tot.txt}}
+\newcommand{\cpuIKMIkIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-init-time.txt}}
+\newcommand{\cpuIKMIkIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-write-time.txt}}
+\newcommand{\cpuIKMIkItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-kernel-time.txt}}
+\newcommand{\cpuIKMIkIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-cost.txt}}
+\newcommand{\cpuIKMIkIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkI-energy.txt}}
+%%% CPU1-200-4
+\newcommand{\cpuIKMIkIItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkII-time-tot.txt}}
+\newcommand{\cpuIKMIkIIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkII-init-time.txt}}
+\newcommand{\cpuIKMIkIIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkII-write-time.txt}}
+\newcommand{\cpuIKMIkIItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkII-kernel-time.txt}}
+\newcommand{\cpuIKMIkIIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkII-cost.txt}}
+\newcommand{\cpuIKMIkIIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkII-energy.txt}}
+%%% CPU1-300-4
+\newcommand{\cpuIKMIkIIItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkIII-time-tot.txt}}
+\newcommand{\cpuIKMIkIIIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkIII-init-time.txt}}
+\newcommand{\cpuIKMIkIIIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkIII-write-time.txt}}
+\newcommand{\cpuIKMIkIIItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkIII-kernel-time.txt}}
+\newcommand{\cpuIKMIkIIIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkIII-cost.txt}}
+\newcommand{\cpuIKMIkIIIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIkIII-energy.txt}}
+%%% CPU1-100-8
+\newcommand{\cpuIKMIIkItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkI-time-tot.txt}}
+\newcommand{\cpuIKMIIkIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkI-init-time.txt}}
+\newcommand{\cpuIKMIIkIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkI-write-time.txt}}
+\newcommand{\cpuIKMIIkItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkI-kernel-time.txt}}
+\newcommand{\cpuIKMIIkIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkI-cost.txt}}
+\newcommand{\cpuIKMIIkIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkI-energy.txt}}
+%%% CPU1-200-8
+\newcommand{\cpuIKMIIkIItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkII-time-tot.txt}}
+\newcommand{\cpuIKMIIkIIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkII-init-time.txt}}
+\newcommand{\cpuIKMIIkIIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkII-write-time.txt}}
+\newcommand{\cpuIKMIIkIItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkII-kernel-time.txt}}
+\newcommand{\cpuIKMIIkIIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkII-cost.txt}}
+\newcommand{\cpuIKMIIkIIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkII-energy.txt}}
+%%% CPU1-300-8
+\newcommand{\cpuIKMIIkIIItimetot}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkIII-time-tot.txt}}
+\newcommand{\cpuIKMIIkIIIinittime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkIII-init-time.txt}}
+\newcommand{\cpuIKMIIkIIIwritetime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkIII-write-time.txt}}
+\newcommand{\cpuIKMIIkIIItime}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkIII-kernel-time.txt}}
+\newcommand{\cpuIKMIIkIIIcost}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkIII-cost.txt}}
+\newcommand{\cpuIKMIIkIIIenergy}{\input{\resultsfolder/\devcpu\cpucoreI-\nKMIIkIII-energy.txt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           MANUALLY UPDATE ALL THESE NUMBERS FOR TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% TABLE 3 Panel B: Implementation Costs of FPGA Acceleration
+% Total hw.cpp lines - 1397; Total #pragma lines in hw.cpp - 75
+\newcommand{\extraLinesKernel}{75}                
+\newcommand{\extraLinesKernelpercent}{5.37}       
+% III_floats/table3/line-comparison: app.cpp lines: #OPENMPI - 251; #FPGA -379
+\newcommand{\extraLinesNonkernel}{128}            
+\newcommand{\extraLinesNonkernelpercent}{51}      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        FLOATING NUMBER IN THE BODY OF THE PAPER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% N. of Economies
+\newcommand{\numbecon}{1,200\@\xspace}          
+\newcommand{\numbeconII}{1,200\@\xspace}        
+% Tolerance of Convergence algorithm
+\newcommand{\tollkcode}{1e(-8)}                 
+\newcommand{\tollbetacode}{1e(-8)}              
+%%%%%%%%%%%%%%%%%%%%% Section: Inspecting the Mechanism > Baseline
+%Vitis tool
+\newcommand{\CLdesignLUT}{895 thousand}     
+\newcommand{\CLdesignDSP}{5,640}            
+\newcommand{\CLdesignRegisters}{1,790,400}  
+\newcommand{\CLdesignBRAM}{1,680}           
+\newcommand{\CLdesignURAM}{800}             
+\newcommand{\CLdesignonchipmemory}{284}     
+\newcommand{\CLdesignBRAMMemory}{59Mb}      
+\newcommand{\CLdesignURAMMemory}{225Mb}     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           END MANUALLY UPDATE ALL THESE NUMBERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{0}
+\onehalfspacing
+
+\begin{document}
+
+\title{Programming FPGAs for Economics:\\
+\vspace{0.1in}
+An Introduction to Electrical Engineering Economics \\
+\vspace{0.1in}
+\texttt{Replication Package} \\ \texttt{PARSER}}
+
+\author{Bhagath Cheela\thanks{Department of Electrical and Systems Engineering, University of Pennsylvania, \textcolor{blue}{\href{mailto:cheelabhagath@gmail.com}{cheelabhagath@gmail.com}}}
+\hspace{2cm}
+Andr\'e DeHon\thanks{Department of Electrical and Systems Engineering, University of Pennsylvania, \textcolor{blue}{\href{mailto:andre@acm.org}{andre@acm.org}}}\\
+\hspace{-1cm}Jes\'us Fern\'andez-Villaverde\thanks{Department of Economics, University of Pennsylvania, \textcolor{blue}{\href{mailto:jesusfv@econ.upenn.edu}{jesusfv@econ.upenn.edu}}}
+\hspace{0.6cm}
+Alessandro Peri\thanks{Department of Economics, University of Colorado, Boulder,
+\textcolor{blue}{\href{mailto:alessandro.peri@colorado.edu}{alessandro.peri@colorado.edu}}}}
+
+\date{\today} 
+
+
+.
+
+\maketitle
+
+%\begin{abstract}
+%\noindent We show how to use field-programmable gate arrays (FPGAs) and their associated high-level synthesis (\texttt{HLS}) compilers to solve heterogeneous agent models with incomplete markets and aggregate uncertainty \citep{KrusellSmith1998}. We document that the acceleration delivered by one single FPGA is comparable to that provided by using \baselinespeedupFPGAICPUI\hspace{-0.1cm} CPU cores in a conventional cluster. The time to solve 1,200 versions of the model drops from \cpuItimehoursminutes to \fpgaItimehoursminutes, illustrating a great potential for structural estimation. We describe how to achieve multiple acceleration opportunities -pipeline, data-level parallelism, and data precision- with minimal modification of the \texttt{C/C++} code written for a traditional sequential processor, which we then deploy on FPGAs easily available at Amazon Web Services. We quantify the speedup and cost of these accelerations. Our paper is the first step toward a new field, electrical engineering economics, focused on designing computational accelerators for economics to tackle challenging quantitative models. Replication code is available on \texttt{Github}.\looseness=-1
+%
+%\noindent \textit{Keywords}{\small: FPGA acceleration; Heterogeneous agents; Aggregate uncertainty; Electrical engineering economics; Cloud computing.}\\
+%\textit{JEL Classifications:}{\small:  C6; C63; C88; D52.}
+%\end{abstract}
+
+
+%\newpage
+
+\section{Introduction}
+This document serves as \texttt{parser} file for replicating all tables presented in the paper ``\textit{Programming FPGAs for Economics: An Introduction to Electrical Engineering Economic}'', by Bhagath Cheela, Andr\'e DeHon, Jes\'us Fern\'andez-Villaverde and Alessandro Peri.
+
+\newpage
+\section{Tables}\label{sec:int}
+
+\begin{table}[ht!]
+\caption{Calibrated Parameters}
+\label{tab:parcal}
+\vspace{-0.1in}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+$\alpha$ & 0.36  & Output capital share\\ 
+$\beta$ & 0.99 & Quarterly discount factor\\
+$\gamma$ & 1 & Relative risk aversion coefficient\\ 
+$\delta$ & 0.025 & Quarterly depreciation rate\\ 
+$\mu$  & 0.15 & Unemployment benefits in terms of wages\\ 
+$\lbar$ & 1/0.9 & Time endowment\\ 
+$\Delta_{A}$ & 0.01 & Aggregate productivity shock size\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[ht!]
+\caption{Benchmarking the CPU: Alternative Search Algorithms}
+\vspace{-0.1in}
+\begin{center}
+\setlength\tabcolsep{4pt}
+\begin{tabular}{@{\extracolsep{\fill}}lccccccc}
+\toprule
+&\multicolumn{1}{c}{\textbf{Linear Search}}&
+&\multicolumn{1}{c}{\textbf{Binary Search}}&
+&\multicolumn{1}{c}{\textbf{Jump Search}}\\
+\textit{Solution Time} &\cpulineartime &&\cpubinarytime &&\cpujumpsearchtime\\
+\textit{Speedup} & - &&\cpubinaryspeedup &&\cpujumpsearchspeedup\\ 
+\bottomrule
+\end{tabular}
+\label{tab:CPUben}
+\end{center}
+\small \textit{Note:} 
+Solution time (in seconds) and speedups of alternative interpolation interval search algorithms. Speedups are computed relative to the linear search algorithm. Results are obtained by solving \numbeconII baseline economies sequentially using a single core instance (\cpuI).
+\end{table}
+
+\begin{table}[ht!]
+\caption{Efficiency Gains and Implementation Costs of FPGA Acceleration}
+\label{tab:baseline}
+\vspace{-0.1in}
+\begin{center}
+\begin{subtable}{\textwidth}
+\caption{Efficiency Gains of FPGA Acceleration}
+\label{tab:baseline:A}
+\setlength\tabcolsep{4pt}
+\begin{tabularx}{\textwidth}{XXXXXXXXXXXXX}
+\toprule
+&&\multicolumn{3}{c}{\textbf{Speedup}}&&\multicolumn{3}{c}{\textbf{Relative Costs (\%)}}&&\multicolumn{3}{c}{\textbf{Energy (\%)}}\\
+\cmidrule{3-5} \cmidrule{7-9} \cmidrule{11-13}
+\multirow{2}{*}{\textit{CPU-cores}}        &&\multicolumn{3}{c}{\textit{FPGAs}}&&\multicolumn{3}{c}{\textit{FPGAs}}&&\multicolumn{3}{c}{\textit{FPGAs}}\\
+&&\multicolumn{1}{c}{\textit{1}}&\multicolumn{1}{c}{\textit{2}}&\multicolumn{1}{c}{\textit{8}}&&\multicolumn{1}{c}{\textit{1}}&\multicolumn{1}{c}{\textit{2}}&\multicolumn{1}{c}{\textit{8}}&&\multicolumn{1}{c}{\textit{1}}&\multicolumn{1}{c}{\textit{2}}&\multicolumn{1}{c}{\textit{8}}\\
+\cmidrule{3-5} \cmidrule{7-9} \cmidrule{11-13}        
+\textit{1}&&\fpgaspeedICPUI&\fpgaspeedIICPUI&\fpgaspeedIIICPUI&& \fpgacostICPUI&\fpgacostIICPUI&\fpgacostIIICPUI&& \fpgaenergyICPUI&\fpgaenergyIICPUI&\fpgaenergyIIICPUI \\
+\textit{8}&&\fpgaspeedICPUII&\fpgaspeedIICPUII&\fpgaspeedIIICPUII&&\fpgacostICPUII&\fpgacostIICPUII&\fpgacostIIICPUII&&\fpgaenergyICPUII&\fpgaenergyIICPUII&\fpgaenergyIIICPUII \\
+\textit{48}&&\fpgaspeedICPUIII&\fpgaspeedIICPUIII&\fpgaspeedIIICPUIII&&\fpgacostICPUIII&\fpgacostIICPUIII&\fpgacostIIICPUIII&&\fpgaenergyICPUIII&\fpgaenergyIICPUIII&\fpgaenergyIIICPUIII \\
+\bottomrule
+\end{tabularx}
+\end{subtable}   
+
+\vspace{10pt}
+
+\begin{subtable}{\textwidth}
+\caption{Implementation Costs of FPGA Acceleration}
+\label{tab:baseline:B} % Subtable B label
+\begin{tabularx}{\textwidth}{p{4.5cm}XXXXXXXXXX}
+\toprule
+&&\multicolumn{3}{c}{\textit{Kernel}}&&\multicolumn{3}{c}{\textit{Non-kernel}}& \\
+&&\multicolumn{1}{c}{Number}&&\multicolumn{1}{c}{Percent (\%)}&&\multicolumn{1}{c}{Number}&&\multicolumn{1}{c}{Percent (\%)} \\
+\cmidrule{3-5}\cmidrule{7-9}
+\textit{Extra Lines of Code} &&\multicolumn{1}{c}{\extraLinesKernel}&&\multicolumn{1}{c}{\extraLinesKernelpercent}&&\multicolumn{1}{c}{\extraLinesNonkernel}&&\multicolumn{1}{c}{\extraLinesNonkernelpercent} \\
+\bottomrule
+\end{tabularx}
+\end{subtable}
+\end{center}
+\small \textit{Note:} Panel A reports speedups provided by the FPGA and cost and energy usage of the FPGA relative to the CPU. The results are obtained by solving \numbeconII baseline economies using AWS instances connected to 1, 2, and 8 FPGAs and using open-MPI parallelization on AWS instances with 1, 8, and 48 cores (rows). Speedup is obtained by dividing the total solution time in the CPU by that in the FPGA. Relative costs and energy are calculated using on-demand AWS prices and total energy consumption, and reported as FPGA usage as a percent of CPU usage. Table \ref{tab:perf_comp} in Appendix \ref{app:perf} reports the details. Panel B estimates implementation costs for both kernel and non-kernel segments of our codebase by reporting the extra lines of code required by the \texttt{HLS}-enhanced \texttt{C} code when compared to standard \texttt{C} code designed to be executed on the CPU using \texttt{Open MPI}.
+\end{table}
+
+\begin{table}[ht!]
+\caption{Single-Kernel FPGA vs. Single CPU Core}\label{tab:robustness}
+\vspace{-0.1in}
+\begin{center}
+\begin{subtable}{\textwidth}
+\caption{Benchmark Model, $\{N_k,N_M\}=\{100,4\}$}
+\label{tab:onekern}
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+\textit{FPGA}-Time(sec)&\textit{CPU}-Time(sec)&\textit{Speedup}(x)&\textit{Relative Costs}(\%)& \textit{Energy}(\%)\\
+\midrule
+\fpgaIknlItimeavg & \cpuItimeavg&\fpgaspeedIknlICPUI&\fpgacostIknlICPUI&\fpgaenergyIknlICPUI\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subtable}
+\vspace{10pt}
+\begin{subtable}{\textwidth}
+\vspace{0.1in}
+\caption{Speedup across Grid Sizes}
+\label{tab:gridperf}\vspace{0.1in}
+\begin{tabularx}{\textwidth}{p{5cm}XXXXXXXXXXXX}
+\toprule
+\text{Aggregate Capital}, $N_{M}$
+&\multicolumn{3}{c}{\textit{4}} &&\multicolumn{3}{c}{\textit{8}}\\
+\cmidrule{2-4} \cmidrule{6-8}
+\text{Individual Capital}, $N_{k}$&\textit{100}&\textit{200}&\textit{300}&&\textit{100}&\textit{200}&\textit{300}\\
+\cmidrule{2-4} \cmidrule{6-8}
+\textit{Speedup (x)} & \fpgaspeedIknlICPUInKMIkI & \fpgaspeedIknlICPUInKMIkII & \fpgaspeedIknlICPUInKMIkIII && \fpgaspeedIknlICPUInKMIIkI & \fpgaspeedIknlICPUInKMIIkII & \fpgaspeedIknlICPUInKMIIkIII & \\ 
+\textit{Relative Costs (\%)} & \fpgacostsavingsIknlICPUInKMIkI & \fpgacostsavingsIknlICPUInKMIkII & \fpgacostsavingsIknlICPUInKMIkIII && \fpgacostsavingsIknlICPUInKMIIkI & \fpgacostsavingsIknlICPUInKMIIkII & \fpgacostsavingsIknlICPUInKMIIkIII & \\ 
+\textit{Energy (\%)} & \fpgaenergysavingsIknlICPUInKMIkI & \fpgaenergysavingsIknlICPUInKMIkII & \fpgaenergysavingsIknlICPUInKMIkIII && \fpgaenergysavingsIknlICPUInKMIIkI & \fpgaenergysavingsIknlICPUInKMIIkII & \fpgaenergysavingsIknlICPUInKMIIkIII & \\ 
+\bottomrule
+\end{tabularx}
+\end{subtable}
+\end{center}
+\small \textit{Note:} Figures are obtained by comparing the solution of \numbeconII economies using AWS instances connected to 1 FPGA and sequential CPU execution on a single core. Panel A focuses on the benchmark economy, $\{N_k,N_M\}=\{100,4\}$. Columns 1-2 detail the average solution time (in seconds) to compute the benchmark economy in a single-kernel, single-device FPGA (\awsinstfI), and a single-core instance (\cpuI), respectively. Columns 3-5 display the efficiency gains of FPGA acceleration in terms of speedup, costs (in percent), and energy savings (in percent), computed as described in Table \ref{tab:baseline}. The FPGA average power consumption on a single-kernel design is \fpgaIknlIpowerconsumption watts. Panel B studies how speedup, relative costs, and energy consumption vary with the size (columns) of the individual household capital holdings grid ($N_k$) and aggregate capital grid ($N_M$). 
+\end{table}
+
+\newcommand{\xx}{0.22in}
+\begin{table}[ht!]
+\setlength\tabcolsep{0pt}
+\caption{Speedup Gains: Acceleration Channels Accounting}
+\vspace{-0.1in}
+\begin{center}
+\begin{tabular}{l@{\hskip \xx}c@{\hskip \xx}c@{\hskip \xx} c@{\hskip \xx}c@{\hskip \xx}c@{\hskip \xx} c@{\hskip \xx}}
+\toprule
+&
+\multirow{2}{*}{\textit{Baseline}}&&
+\multirow{2}{*}{\textit{Pipelining}} && 
+\multicolumn{2}{c}{\textit{Data Parallelism}}\\
+\cmidrule{6-7}
+&&&&
+&\parbox[c]{1.5cm}{\,\,\textit{Within}\\ \textit{Economy}}
+&\parbox[c]{1.5cm}{\,\,\,\textit{Across}\\ \textit{Economies}}\\
+\cmidrule{2-2}\cmidrule{4-4}\cmidrule{6-7}
+\parbox[l][1.cm]{3.7cm}{
+\footnotesize{$\dfrac{\text{Single-core Execution}}{\text{FPGA Solution}}$}}
+&\fpgaIbasespeedcpuIbasenKMIkI&&
+\fpgaIpipspeedcpuIbasenKMIkI&&
+\fpgaspeedIknlICPUInKMIkI&
+\fpgaspeedICPUI\\
+\textit{CL Resources Utilization (\%)}\\
+BRAM&\baselineBRAM &&\pipelinenBRAM &&\withindataparallelBRAM &\acrossdataparallelBRAM \\
+DSP&\baselineDSP&&\pipelineDSP &&\withindataparallelDSP &\acrossdataparallelDSP \\
+Registers&\baselineRegisters&&\pipelineRegisters &&\withindataparallelRegisters &\acrossdataparallelRegisters \\
+LUT&\baselineLUTs&&\pipelineLUTs &&\withindataparallelLUTs &\acrossdataparallelLUTs \\
+URAM&\baselineURAM&&\pipelineURAM &&\withindataparallelURAM &\acrossdataparallelURAM \\
+\bottomrule
+\end{tabular}
+\end{center}
+\small \textit{Note:} Column 1 reports the speedup for a kernel design where all acceleration channels are switched off (baseline). Columns 2-4 report the speedup associated with implementing efficient pipelines (Column 2), introducing data parallelism in the kernel design (Column 3), and instantiating three kernels in the same FPGA (Column 4). The speedup (row 1) is computed by dividing the total solution time in the one-core CPU by the solution time in the FPGA. The acceleration in Columns 1-3 is performed using a single-kernel, single-device FPGA (\awsinstfI), where Column 4 coincides with the single-kernel design. The acceleration in Column 4 is performed by deploying the three-kernel design in parallel across the three SLRs in a single FPGA (\awsinstfI). Averages are computed over 1,200 economies, except for the Baseline and Pipeline designs, which for cost considerations are computed over 120 economies. Resources are measured (using Xilinx Vivado) as a percentage of the Xilinx VU9P FPGA's resources utilized by AWS images associated with the different designs (columns). \textit{Available Resources: BRAM (\CLdesignBRAM), DSP (\CLdesignDSP), Registers (\CLdesignRegisters), LUTs (\CLdesignLUT), URAM (\CLdesignURAM)}. 
+\label{tab:acccha}
+\end{table}
+
+\clearpage
+
+\appendix
+\setcounter{figure}{0} \setcounter{table}{0} \setcounter{page}{1}
+\renewcommand
+\thefigure{A.\arabic{figure}} \renewcommand
+\thetable{A.\arabic{table}} \renewcommand \thepage {A.\arabic{page}}
+
+\setcounter{figure}{0} \setcounter{table}{0} \setcounter{page}{1}
+\renewcommand
+\thefigure{A.\arabic{figure}} \renewcommand
+\thetable{A.\arabic{table}} \renewcommand \thepage {A.\arabic{page}}
+
+\section{Online Appendix Tables}
+
+\begin{table}[ht!]
+\caption{\textbf{List of Abbreviations}}
+\noindent
+\begin{footnotesize}
+\begin{tabular}{lll}
+\toprule
+ALM & Aggregate Law of Motion & Algorithm stage \\
+AFI & Amazon FPGA Image & CL design implemented on AWS FPGAs \\
+AWS & Amazon Web Services & Cloud service \\
+.AWSXCLBIN & FPGA executable & Executable to be run on AWS FPGA\\
+BRAM & Block RAM  & Local memory \\
+CL & Custom logic & FPGA logical units\\ 
+CPU & Central processing unit & - \\
+DRAM & Dynamic random access memory & Global memory \\
+DSP & Digital signal processing unit & Accumulator unit\\
+FPGA & Field-programmable gate array& Custom accelerator \\
+GPU & Graphics processing unit & Graphics accelerator \\
+HLS & High level synthesis & Compiler-based hardware design\\
+IEEE754 & Double-precision floating-point standard & Floating-point standard \\
+IHP & Individual Household Problem & Algorithm stage\\ 
+II & Initiation Interval & \\
+LUT & Lookup table & Logical units available for CL design\\
+OpenCL & Open Computing Language & \url{https://www.khronos.org/opencl}\\ 
+Open MPI & Open message passing interface & \url{https://www.open-mpi.org}\\
+PCIe & Peripheral Component Interconnect Express & Bus-connections with host  \\
+SLR & Super Logic Region & FPGA CL regions \\
+URAM & Ultra RAM & Local memory \\
+Xilinx VU9 & FPGA on AWS & - \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\label{tab:acronyms}
+\end{table}
+
+\begin{table}[ht!]
+\begin{center}
+\caption{Technical Specifications}
+\begin{tabular}{l c c c c}
+\toprule
+\textbf{AWS Instance} & \textbf{Cores} & \textbf{FPGAs} & \textbf{Pricing} (\$/hour) & \textbf{Memory} (GiB) \\ 
+\midrule
+\cpuI & 1 & - & 0.119 & 8\\
+\cpuII & 8 & - & 0.952 & 64\\
+\cpuIII & 48 & - & 5.712 & 384\\
+\awsinstfI & 4 & 1 & 1.650 & 122\\
+\awsinstfII & 8 & 2 & 3.300 & 244\\
+\awsinstfIII & 32 & 8 & 13.200 & 976\\
+\bottomrule
+\label{tab:tecspe}
+\end{tabular}
+\end{center}
+\small
+\noindent \textit{Note:} Hardware architecture and AWS cloud pricing (Columns 2-5) for deployed AWS instances (Column 1). The column marked Cores reports the number of physical cores. The column marked FPGAs reports the number of connected FPGA chips (f1 instances only). The column marked Pricing denotes the AWS \textit{On Demand} Pricing per instance per hour as of September 2021. Memory is measured in Gigabytes. \textit{Source:} \href{https://aws.amazon.com/ec2/instance-types/}{AWS instances}, \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cpu-options-supported-instances-values.html}{AWS specs}.
+\end{table}
+
+
+\begin{table}[ht!]
+\caption{FPGA Designs Performance and Resource Utilization by Grid Size}
+\vspace{-0.1in}
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{lccccccccc}
+\toprule
+&\textbf{Three-Kernel}&&\multicolumn{7}{c}{\textbf{Single-Kernel}} \\
+\cmidrule{2-2}\cmidrule{4-10}
+\multicolumn{1}{l}{\text{Aggr. Capital}} &\textit{4}&& \multicolumn{3}{c}{\textit{4}} && \multicolumn{3}{c}{\textit{8}}\\
+\cmidrule{2-2}\cmidrule{4-6}\cmidrule{8-10}
+\multicolumn{1}{l}{\text{Indiv. Capital}} &\textit{100}&& \textit{100}&\textit{200}&\textit{300}&& \textit{100}&\textit{200}&\textit{300}\\
+\cmidrule{2-2}\cmidrule{4-6}\cmidrule{8-10}
+Time (s) &\fpgaItime &&\fpgatimeIknlInKMIkI & \fpgatimeIknlInKMIkII & \fpgatimeIknlInKMIkIII && \fpgatimeIknlInKMIIkI & \fpgatimeIknlInKMIIkII & \fpgatimeIknlInKMIIkIII\\  
+Cost (\$)& \fpgaIcost && \fpgacostIknlInKMIkI & \fpgacostIknlInKMIkII & \fpgacostIknlInKMIkIII && \fpgacostIknlInKMIIkI & \fpgacostIknlInKMIIkII & \fpgacostIknlInKMIIkIII\\
+Energy (J)& \fpgaIenergy &&  \fpgaenergyIknlInKMIkI & \fpgaenergyIknlInKMIkII & \fpgaenergyIknlInKMIkIII && \fpgaenergyIknlInKMIIkI & \fpgaenergyIknlInKMIIkII & \fpgaenergyIknlInKMIIkIII\\
+BRAM(\%)&\acrossdataparallelBRAM&&\bramnKMIkI & \bramnKMIkII & \bramnKMIkIII && \bramnKMIIkI & \bramnKMIIkII & \bramnKMIIkIII\\
+DSP(\%)&\acrossdataparallelDSP&&\dspnKMIkI & \dspnKMIkII & \dspnKMIkIII && \dspnKMIIkI & \dspnKMIIkII & \dspnKMIIkIII\\
+Registers(\%)&\acrossdataparallelRegisters&&\registernKMIkI & \registernKMIkII & \registernKMIkIII && \registernKMIIkI & \registernKMIIkII & \registernKMIIkIII\\
+LUT(\%)&\acrossdataparallelLUTs&&\lutnKMIkI & \lutnKMIkII & \lutnKMIkIII && \lutnKMIIkI & \lutnKMIIkII & \lutnKMIIkIII\\
+URAM(\%)&\acrossdataparallelURAM&&\uramnKMIkI & \uramnKMIkII & \uramnKMIkIII && \uramnKMIIkI & \uramnKMIIkII & \uramnKMIIkIII\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\label{Tab:resourse_grid}
+\end{center}
+\label{tab:res}
+\small \textit{Note:} Solution time (in seconds), cost (in USD), energy (in joules) and FPGA resources (rows) across hardware designs (three- and single-kernel) and grid sizes on individual capital $N_{k}=\{100,200,300\}$ and aggregate capital $N_{M}=\{4,8\}$ (columns). Time performance is measured in seconds required to solve \numbeconII baseline economies on a single FPGA (\awsinstfI) across the different hardware designs and grid sizes (columns). Resources are measured (using Xilinx Vivado) as a percentage of Xilinx VU9P FPGA's resources utilized by AWS images associated with the different hardware designs and grid sizes (columns). \textit{Available Resources:} BRAM (\CLdesignBRAM), DSP (\CLdesignDSP), Registers (\CLdesignRegisters), LUTs (\CLdesignLUT), URAM (\CLdesignURAM). Available resources are lower than total resources because they exclude resources utilized by the AWS shell that are not available for \texttt{CL} design.
+\end{table}
+
+\begin{table}[ht!]
+\caption{Performance Comparison}\label{tab:perf_comp}
+\vspace{-0.2in}
+\hspace{-1.8cm} 
+\begin{center}
+\begin{tabular}{lccccccc}
+\toprule
+&\multicolumn{3}{c}{\textbf{CPU cores}}&&\multicolumn{3}{c}{\textbf{FPGA devices}}\\
+\cmidrule{2-4}\cmidrule{6-8}
+N.    &1&8&48&&1&2&8\\
+\cmidrule{2-4}\cmidrule{6-8}
+Exec Time (s) &\cpuItimetot &\cpuIItimetot &\cpuIIItimetot && \fpgaItimetot &\fpgaIItimetot &\fpgaIIItimetot\\
+Init Time (s) &\cpuIinittime &\cpuIIinittime &\cpuIIIinittime&&  \fpgaIinittime&\fpgaIIinittime&\fpgaIIIinittime\\         
+Print Time (s) &\cpuIwritetime &\cpuIIwritetime &\cpuIIIwritetime&& \fpgaIwritetime&\fpgaIIwritetime&\fpgaIIIwritetime\\     
+Sol. Time (s) &\cpuItime &\cpuIItime &\cpuIIItime&& \fpgaItime&\fpgaIItime&\fpgaIIItime\\
+Cost (\$) & \cpuIcost & \cpuIIcost &\cpuIIIcost && \fpgaIcost&\fpgaIIcost&\fpgaIIIcost\\
+Energy (J) & \cpuIenergy& \cpuIIenergy &\cpuIIIenergy&& \fpgaIenergy&\fpgaIIenergy&\fpgaIIIenergy\\
+\cmidrule{2-8}
+AWS Instance & \cpuI & \cpuII  & \cpuIII &&\awsinstfI&\awsinstfII&\awsinstfIII \\  
+\bottomrule         
+\end{tabular}
+\end{center}
+\small
+\textit{Note:} Execution, initialization, printing and solution time (in seconds), cost (in USD) and energy (in joules) to solve \numbeconII baseline economies using \texttt{Open MPI} CPU multi-core acceleration on Amazon M5N multi-core instances (with 1, 8, 48 physical cores, Columns 1-3) and using FPGA acceleration on Amazon F1 instances (connected to 1, 2, 8 FPGA devices, Columns 4-6). 
+\end{table}
+
+
+\begin{table}[ht!]
+\caption{CPU Performance by Grid Size}
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{lccccccccc}
+\toprule
+\multicolumn{1}{l}{\text{Aggregate Capital}, $N_M$} && \multicolumn{3}{c}{\textit{4}} && \multicolumn{3}{c}{\textit{8}}\\
+\cmidrule{3-5}\cmidrule{7-9}
+\multicolumn{1}{l}{\text{Individual Capital}, $N_k$} && \textit{100}&\textit{200}&\textit{300}&& \textit{100}&\textit{200}&\textit{300}\\
+\cmidrule{3-5}\cmidrule{7-9}
+Exec. Time (s) &&\cpuIKMIkItimetot&\cpuIKMIkIItimetot&\cpuIKMIkIIItimetot&&\cpuIKMIIkItimetot&\cpuIKMIIkIItimetot&\cpuIKMIIkIIItimetot\\
+Init. Time (s) &&\cpuIKMIkIinittime&\cpuIKMIkIIinittime&\cpuIKMIkIIIinittime&&\cpuIKMIIkIinittime&\cpuIKMIIkIIinittime&\cpuIKMIIkIIIinittime\\
+Print Time (s) &&\cpuIKMIkIwritetime&\cpuIKMIkIIwritetime&\cpuIKMIkIIIwritetime&&\cpuIKMIIkIwritetime&\cpuIKMIIkIIwritetime&\cpuIKMIIkIIIwritetime\\
+Sol. Time (s) && \cpuIKMIkItime&\cpuIKMIkIItime&\cpuIKMIkIIItime&& \cpuIKMIIkItime&\cpuIKMIIkIItime&\cpuIKMIIkIIItime\\
+Cost (\$) && \cpuIKMIkIcost & \cpuIKMIkIIcost& \cpuIKMIkIIIcost && \cpuIKMIIkIcost & \cpuIKMIIkIIcost& \cpuIKMIIkIIIcost\\
+Energy (J) && \cpuIKMIkIenergy & \cpuIKMIkIIenergy & \cpuIKMIkIIIenergy&& \cpuIKMIIkIenergy & \cpuIKMIIkIIenergy & \cpuIKMIIkIIIenergy\\
+\bottomrule         
+\end{tabular}
+\end{footnotesize}
+\end{center}
+\label{Tab:grid_sizes}
+\small
+\textit{Note:} Execution, initialization, printing and solution time (in seconds), cost (in USD) and energy (in joules) to solve \numbeconII baseline economies on a single core CPU (\cpuI) for different grid sizes (columns) on individual capital $N_{k}=\{100,200,300\}$ and aggregate capital $N_{M}=\{4,8\}$.
+\end{table}
+
+\begin{table}[htb!]
+\setlength\tabcolsep{0pt}
+\caption{Precision Accuracy Analysis}
+\vspace{-0.1in}
+\begin{center}
+\begin{subtable}{\textwidth}
+\caption{ALM Coefficients}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l *{5}{c} }
+\toprule
+&$\beta_{1}(a_b)$&$\beta_{2}(a_b)$&$\beta_{1}(a_g)$&$\beta_{2}(a_g)$\\
+\cmidrule{2-5}
+Floating-Point &\betaIab&\betaIIab&\betaIag&\betaIIag\\
+Fixed Point &\betaIabFix&\betaIIabFix&\betaIagFix&\betaIIagFix\\
+\bottomrule
+\end{tabular*}
+\end{subtable}
+\par\bigskip
+\begin{subtable}{\textwidth}
+\caption{Policy Function, $k'$}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l *{6}{c} }
+\toprule
+Mean$\left(\frac{|\text{Fixed}-{Float}|}{Float}\right)\%$&\absmeandifferencekprime&&&Max$\left(\frac{|\text{Fixed}-{Float}|}{Float}\right)\%$ &\absmaxdifferencekprime\\
+\bottomrule
+\end{tabular*}
+\end{subtable}
+\par\bigskip
+\begin{subtable}{\textwidth}
+\caption{Individual Capital Holdings Distribution, $T=1,100$}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l *{6}{c} }
+\toprule
+&Mean & Std& 0.25 & 0.5 & 0.75\\
+\cmidrule{2-6}
+Floating-Point &\meankcross&\stdkcross&\qIkcross&\mediankcross&\qIIIkcross\\
+Fixed Point &\meankcrossFix&\stdkcrossFix&\qIkcrossFix&\mediankcrossFix&\qIIIkcrossFix\\
+\midrule
+Mean$\left(\frac{|\text{Fixed}-{Float}|}{Float}\right)\%$&\absmeandifferencekcross&&&Max$\left(\frac{|\text{Fixed}-{Float}|}{Float}\right)\%$ &\absmaxdifferencekcross\\
+\bottomrule
+\end{tabular*}
+\end{subtable}
+\begin{subtable}{\textwidth}
+\caption{Euler Equation Errors (EEE)}
+\label{tab:EE} 
+\begin{tabularx}{\textwidth}{XXXXX}
+\toprule
+&   EEE   & FPGA & CPU & $|\Delta_{\text{FPGA}-\text{CPU}}/\text{CPU}|$\% \\
+\cmidrule{2-5}
+\multirow{2}{*}{$N_k=100$} &  Mean (\%)  & \EEEmeanfpgaIKMIkI & \EEEmeancpuIKMIkI & \EEEmeanrelKMIkI\\
+&Max (\%)  & \EEEmaxfpgaIKMIkI & \EEEmaxcpuIKMIkI & \EEEmaxrelKMIkI\\
+\multirow{2}{*}{$N_k=300$} & Mean (\%)  & \EEEmeanfpgaIKMIkIII & \EEEmeancpuIKMIkIII & \EEEmeanrelKMIkIII\\
+&Max (\%)   & \EEEmaxfpgaIKMIkIII & \EEEmaxcpuIKMIkIII & \EEEmaxrelKMIkIII\\      
+\bottomrule
+\end{tabularx}
+\end{subtable}
+\end{center}
+\label{tab:preana}
+\end{table}
+
+\end{document}
+ 

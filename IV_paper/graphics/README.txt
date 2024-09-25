@@ -1,1 +1,0 @@
-This folder is pre-populated with graphs created using Microsoft PowerPoint, along with visualizations of resource utilization for two designs generated using AMD Xilinx Vivado software.
